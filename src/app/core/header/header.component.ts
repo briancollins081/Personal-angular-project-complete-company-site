@@ -34,6 +34,9 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
+    
   }
+
+  
 
 }

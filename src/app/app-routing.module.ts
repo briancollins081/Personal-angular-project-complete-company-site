@@ -5,7 +5,23 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'home', pathMatch:'full'},
-  {path: 'home', component:HomeComponent}
+  {path: 'home', component:HomeComponent},
+  {
+    path: 'services',
+    loadChildren: () => import('./services/services.module').then(m => m.ServicesModule)
+  },
+  {
+    path: 'blog',
+    loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule)
+  },
+  {
+    path: 'contact',
+    loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
+  },
+  {
+    path: 'about',
+    loadChildren: () => import('./about/about.module').then(m => m.AboutModule)
+  }
 ];
 
 @NgModule({
