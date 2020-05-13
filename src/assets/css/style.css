@@ -571,7 +571,7 @@ img {
 }
 
 .hero-slider .hs-item-bg1 {
-  background-image: url("../img/slider/sl1.jpg");
+  background-image: url("../img/slider/telemedicine.jpg");
 }
 
 .hero-slider .hs-item-bg2 {
@@ -599,7 +599,7 @@ img {
 }
 
 .hero-slider .hs-item-bg8 {
-  background-image: url("../img/slider/sl9.jpg");
+  background-image: url("../img/slider/outpatient.jpg");
 }
 .hero-slider .hs-item-bg9 {
   background-image: url("../img/slider/list.jpg");
@@ -658,7 +658,7 @@ img {
   position: absolute;
   left: 0;
   top: 0;
-  color: #396cf0;
+  color: #db0000;
   font-size: 40px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -713,7 +713,7 @@ img {
   display: block;
   margin-top: -4px;
   font-size: 14px;
-  color: #396cf0;
+  color: #db0000;
 }
 
 .welcome-inner-content h3 {
@@ -741,7 +741,7 @@ img {
   margin-bottom: 10px;
   padding-left: 23px;
   float: left;
-  width: 40%;
+  width: 100%;
 }
 
 .welcome-inner-content ul li:last-child {
@@ -755,7 +755,7 @@ img {
   top: 7px;
   width: 15px;
   height: 15px;
-  background: #396cf0;
+  background: #db0000;
   -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
@@ -1236,7 +1236,7 @@ img {
 }
 
 .counter-section .single-counter i {
-  color: #396cf0;
+  color: #db0000;
   font-size: 45px;
 }
 
@@ -1550,7 +1550,7 @@ img {
 .cta-area .cta-text-content .cta-contant {
   font-size: 35px;
   font-weight: bold;
-  color: #396cf0;
+  color: #db0000;
   margin-top: 25px;
 }
 
@@ -1559,8 +1559,10 @@ img {
   bottom: 0;
 }
 
-.cta-area .cta-doctor-img img {
-  max-width: 210px;
+.cta-area .cta-doctor-img .img {
+  max-width: 300px;
+  background-image: url(assets/img/announcement.jpg);
+  background-size: cover;
 }
 
 /*
