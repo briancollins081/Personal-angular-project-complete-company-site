@@ -241,7 +241,7 @@ img {
   z-index: 999999999999;
   text-align: center;
 }
-
+/* 
 .preloader .lds-heart {
   display: inline-block;
   position: relative;
@@ -281,7 +281,7 @@ img {
 .preloader .lds-heart div::after {
   top: -17px;
   border-radius: 50% 50% 0 0;
-}
+} */
 
 @-webkit-keyframes lds-heart {
   0% {
@@ -1771,6 +1771,7 @@ img {
 
 .page-title ul li a:hover {
   color: #db0000;
+  /* color: #deddfc; */
 }
 
 .page-title ul li::before {
@@ -2661,6 +2662,10 @@ img {
 #toTop i:hover {
   background: #ff0000;
   color: #ffffff;
+}
+
+.btn-custom:hover, .btn-custom:active{
+  color: #ffffff !important;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,58 @@
+<div class="side-bar">
+    <div class="widget search-box">
+        <form>
+            <input type="text" class="form-control" id="search-box" name="search" placeholder="Search for...">
+            <button type="submit" class="default-btn"><i class="icofont-ui-search"></i></button>
+        </form>
+    </div>
+
+    <div class="widget latest-post">
+        <h4 class="title">Latest Post</h4>
+        <div class="row justify-content-center" *ngIf="isLoading">
+            <div class="col-lg-4">
+                <p class="text-center">Fetching lists</p>
+                <img class="img-fluid" src="assets/img/loader.gif" alt="">
+            </div>
+        </div>
+        <div class="single-post" *ngFor="let post of latestPosts">
+            <div class="img">
+                <a [routerLink]="['/blog/s', post._id]"><img src="http://localhost:9090/{{post.post_image_url}}"
+                        alt="latest-post"></a>
+            </div>
+
+            <div class="content">
+                <ul>
+                    <li>Posted by <a href="javascript:void()">{{post.author_fname}}
+                            {{post.author_lname}}</a></li>
+                </ul>
+                <h4><a [routerLink]="['/blog/s', post._id]">{{post.post_title}}</a></h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="widget categories">
+        <h3 class="title">Categories</h3>
+
+        <ul>
+            <li><a href="javascript:void()"><i class="icofont-double-right"></i> General Health</a></li>
+            <li><a href="javascript:void()"><i class="icofont-double-right"></i> Medical Advice</a></li>
+            <li><a href="javascript:void()"><i class="icofont-double-right"></i> News Updates</a></li>
+            <li><a href="javascript:void()"><i class="icofont-double-right"></i> Government News</a></li>
+            <li><a href="javascript:void()"><i class="icofont-double-right"></i> Other Content</a></li>
+        </ul>
+    </div>
+
+    <div class="widget popular-tags">
+        <h3 class="title">Popular Tags</h3>
+
+        <ul>
+            <li><a href="javascript:void()">Dental</a></li>
+            <li><a href="javascript:void()">Child Health</a></li>
+            <li><a href="javascript:void()">Mothers</a></li>
+            <li><a href="javascript:void()">Doctors</a></li>
+            <li><a href="javascript:void()">Patients</a></li>
+            <li><a href="javascript:void()">Advice</a></li>
+            <li><a href="javascript:void()">Services</a></li>
+        </ul>
+    </div>
+</div>

@@ -6,9 +6,11 @@
             </div>
 
             <div class="col-md-6 col-lg-5">
+
                 <ul>
                     <li><a [routerLink]="'/home'">Home</a></li>
                     <li>Blog</li>
+                    <li><a class="btn btn-info btn-custom" href="http://localhost:4280/">Login Admin</a></li>
                 </ul>
             </div>
         </div>
@@ -19,8 +21,46 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-12">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                <div class="row justify-content-center" *ngIf="isLoading">
+                    <div>
+                        <p class="text-center">Fetching posts</p>
+                        <img class="img-fluid" src="assets/img/loader.gif" alt="">
+                    </div>
+                </div>
+                <div class="row" *ngIf="!isLoading && posts.length <= 0">
+                    <div class="col">
+                        <h5 class="my-5 text-center error">No posts at the momment. Try again later...</h5>
+                    </div>
+                </div>
+                <div class="row" *ngIf="!isLoading && posts.length > 0">
+                    <div class="col-lg-6 col-md-6" *ngFor="let post of posts">
+                        <div class="single-card actical-card">
+                            <div class="thumb-img">
+                                <a [routerLink]="['/blog/s', post._id]">
+                                    <img src="http://localhost:9090/{{post.post_image_url}}" alt="News Image" />
+                                </a>
+                            </div>
+                            <div class="caption-text">
+                                <h3><a [routerLink]="['/blog/s', post._id]">{{post.post_title}}</a></h3>
+
+                                <ul class="meta-tag">
+                                    <li class="author">
+                                        <!-- <img src="assets/img/patient/1.jpg" alt=""> -->
+                                        <img src="https://img.icons8.com/officel/50/000000/user.png" width="100"
+                                            class="img-fluid" />
+                                        <a href="javascript:void()">{{post.author_fname}} {{post.author_lname}}</a>
+                                    </li>
+                                    <li>{{post.updatedAt}}</li>
+                                    <!-- <li><i class="icofont-speech-comments"></i> 30</li> -->
+                                </ul>
+
+                                <div [innerHTML]="post.introduction"></div>
+                                <a [routerLink]="['/blog/s', post._id]" [queryParams]="{debug: true}"
+                                    class="read-more">Read More <i class="icofont-swoosh-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-6 col-md-6">
                         <div class="single-card actical-card">
                             <div class="thumb-img">
                                 <a href="blog.html#">
@@ -267,116 +307,12 @@
                                 </ul>
                             </nav>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
             <div class="col-lg-4 col-md-12">
-                <div class="side-bar">
-                    <div class="widget search-box">
-                        <form>
-                            <input type="text" class="form-control" id="search-box" name="search"
-                                placeholder="Search for...">
-                            <button type="submit" class="default-btn"><i class="icofont-ui-search"></i></button>
-                        </form>
-                    </div>
-
-                    <div class="widget latest-post">
-                        <h4 class="title">Latest Post</h4>
-
-                        <div class="single-post">
-                            <div class="img">
-                                <a href="blog.html#"><img src="assets/img/news/latest-post1.jpg" alt="latest-post"></a>
-                            </div>
-
-                            <div class="content">
-                                <ul>
-                                    <li>Posted by <a href="blog.html#">Admin</a></li>
-                                </ul>
-                                <h4><a href="blog.html#">Consulting Fee Structures: 5 Models Ranked from Worst to
-                                        Best</a></h4>
-                            </div>
-                        </div>
-
-                        <div class="single-post">
-                            <div class="img">
-                                <a href="blog.html#"><img src="assets/img/news/latest-post2.jpg" alt="latest-post"></a>
-                            </div>
-
-                            <div class="content">
-                                <ul>
-                                    <li>Posted by <a href="blog.html#">Admin</a></li>
-                                </ul>
-                                <h4><a href="blog.html#">5 Secrets to a Successful Business Coaching Relationship</a>
-                                </h4>
-                            </div>
-                        </div>
-
-                        <div class="single-post">
-                            <div class="img">
-                                <a href="blog.html#"><img src="assets/img/news/latest-post3.jpg" alt="latest-post"></a>
-                            </div>
-
-                            <div class="content">
-                                <ul>
-                                    <li>Posted by <a href="blog.html#">Admin</a></li>
-                                </ul>
-                                <h4><a href="blog.html#">How to Put Your Value Proposition to Work</a></h4>
-                            </div>
-                        </div>
-
-                        <div class="single-post mb-0">
-                            <div class="img">
-                                <a href="blog.html#"><img src="assets/img/news/latest-post1.jpg" alt="latest-post"></a>
-                            </div>
-
-                            <div class="content">
-                                <ul>
-                                    <li>Posted by <a href="blog.html#">Admin</a></li>
-                                </ul>
-                                <h4><a href="blog.html#">Consulting Sales for the Elite Consultant</a></h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="widget categories">
-                        <h3 class="title">Categories</h3>
-
-                        <ul>
-                            <li><a href="blog.html#"><i class=" icofont-double-right"></i> Business Consulting</a></li>
-                            <li><a href="blog.html#"><i class="icofont-double-right"></i> Financial Advice</a></li>
-                            <li><a href="blog.html#"><i class="icofont-double-right"></i> Market Research</a></li>
-                            <li><a href="blog.html#"><i class="icofont-double-right"></i> Business Solutions</a></li>
-                            <li><a href="blog.html#"><i class="icofont-double-right"></i> Professional Planning</a></li>
-                            <li><a href="blog.html#"><i class="icofont-double-right"></i> Finanace Services</a></li>
-                            <li><a href="blog.html#"><i class="icofont-double-right"></i> Business Planning</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="widget popular-tags">
-                        <h3 class="title">Popular Tags</h3>
-
-                        <ul>
-                            <li><a href="blog.html#">Business</a></li>
-                            <li><a href="blog.html#">Finanace</a></li>
-                            <li><a href="blog.html#">Solutions</a></li>
-                            <li><a href="blog.html#">Market Research</a></li>
-                            <li><a href="blog.html#">Planning</a></li>
-                            <li><a href="blog.html#">Advice</a></li>
-                            <li><a href="blog.html#">Financial</a></li>
-                            <li><a href="blog.html#">Services</a></li>
-                            <li><a href="blog.html#">Professional</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="widget quick-contact mb-0">
-                        <h4>Quick contact to help?</h4>
-                        <p>Excepteur sint occaecat non proident, sunt in culpa officia deserunt mollit anim id est
-                            laborum.</p>
-                        <a href="blog.html#">Contact Us <span class="right"><i
-                                    class="icofont-double-right"></i></span></a>
-                    </div>
-                </div>
+               <app-sidebar></app-sidebar>
             </div>
         </div>
     </div>

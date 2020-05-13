@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from "@angular/common/http";
 import { BlogComponent } from './blog.component';
 import { BlogSingleComponent } from './blog-single/blog-single.component';
 import { SharedModule } from '../shared/shared.module';
 import { Routes, RouterModule } from '@angular/router';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 const routes: Routes = [
   {
@@ -11,17 +13,18 @@ const routes: Routes = [
     component: BlogComponent
   },
   {
-    path: 'single',
+    path: 's/:id',
     component: BlogSingleComponent
   }
 ]
 
 @NgModule({
-  declarations: [BlogComponent, BlogSingleComponent],
+  declarations: [BlogComponent, BlogSingleComponent, SidebarComponent],
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    HttpClientModule
   ]
 })
 export class BlogModule { }
