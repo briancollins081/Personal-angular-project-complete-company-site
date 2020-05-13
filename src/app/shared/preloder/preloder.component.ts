@@ -15,7 +15,7 @@ export class PreloderComponent implements OnInit, AfterViewInit {
       "use strict";
       $(document).on('ready', function () {
         $(window).on('load', function () {
-          $(".preloader").fadeOut(500);
+          $(".preloader").fadeOut(1000);
         });
       });
     }($));

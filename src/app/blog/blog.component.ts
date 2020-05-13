@@ -10,7 +10,7 @@ import { NormalPost } from './post';
 export class BlogComponent implements OnInit {
   isLoading: boolean = true;
   posts: NormalPost[] = [];
-  latestPosts: NormalPost[] = [];
+  // latestPosts: NormalPost[] = [];
 
   constructor(private blogService: BlogService) { }
 
@@ -24,8 +24,8 @@ export class BlogComponent implements OnInit {
             p.updatedAt = new Date(p.updatedAt).toLocaleDateString();
             p.introduction = p.post_content.substr(0, p.post_content.indexOf('</p>') > 0 ? p.post_content.indexOf('</p>') : 200)
           });
-          this.latestPosts = this.posts.slice(0, 4).sort(this.compare);
-          console.log('latest posts', this.latestPosts);
+          // this.latestPosts = this.posts.slice(0, 4).sort(this.compare);
+          // console.log('latest posts', this.latestPosts);
           
           this.isLoading = false;
           console.log('posts', this.posts);

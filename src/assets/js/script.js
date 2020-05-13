@@ -122,30 +122,30 @@
         });
         
         // Latest news Carousel JS
-        $('.latest-news-carousel').owlCarousel({
-            loop:true,
-            nav:true,
-            autoplay:true,
-            autoplayHoverPause: true,
-            mouseDrag: false,
-            margin: 30,
-            dots: false,
-            navText: [
-                "<i class='icofont-swoosh-left'></i>",
-                "<i class='icofont-swoosh-right'></i>"
-            ],
-            responsive:{
-                0:{
-                    items:1
-                },
-                768:{
-                    items:2
-                },
-                1000:{
-                    items:3
-                }
-            }
-        });
+        // $('.latest-news-carousel').owlCarousel({
+        //     loop:true,
+        //     nav:true,
+        //     autoplay:true,
+        //     autoplayHoverPause: true,
+        //     mouseDrag: false,
+        //     margin: 30,
+        //     dots: false,
+        //     navText: [
+        //         "<i class='icofont-swoosh-left'></i>",
+        //         "<i class='icofont-swoosh-right'></i>"
+        //     ],
+        //     responsive:{
+        //         0:{
+        //             items:1
+        //         },
+        //         768:{
+        //             items:2
+        //         },
+        //         1000:{
+        //             items:3
+        //         }
+        //     }
+        // });
 
         // Subscribe form
 		// $(".newsletter-form").validator().on("submit", function (event) {

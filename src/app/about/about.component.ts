@@ -19,7 +19,6 @@ export class AboutComponent implements OnInit, AfterViewInit {
   }
 
   initJS() {
-
     $('.expert-doctors-carousel').owlCarousel({
       loop: true,
       nav: true,

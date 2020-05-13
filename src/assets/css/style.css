@@ -241,6 +241,7 @@ img {
   z-index: 999999999999;
   text-align: center;
 }
+
 /* 
 .preloader .lds-heart {
   display: inline-block;
@@ -601,6 +602,7 @@ img {
 .hero-slider .hs-item-bg8 {
   background-image: url("../img/slider/outpatient.jpg");
 }
+
 .hero-slider .hs-item-bg9 {
   background-image: url("../img/slider/list.jpg");
 }
@@ -789,6 +791,9 @@ img {
 .single-card .thumb-img img {
   -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 88%, 50% 100%, 0 88%, 0 0);
   clip-path: polygon(50% 0%, 100% 0, 100% 88%, 50% 100%, 0 88%, 0 0);
+  height: auto !important;
+  min-height: 200px !important;
+  width: 100% !important;
 }
 
 .single-card .thumb-img::before {
@@ -1723,8 +1728,18 @@ img {
 20- Page Title Styles
 ------------------------------------*/
 
+/* .page-title-blog-bg{
+  background-image: url("../img/top/blog.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-top: 245px;
+  padding-bottom: 60px;
+} */
+
 .page-title {
-  background-image: url("../img/slider/1.jpg");
+  background-image: url("../img/top/blog.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1811,6 +1826,11 @@ img {
   position: relative;
 }
 
+.blog-details-area .blog-details .article-img img {
+  width: 100%;
+  height: auto;
+}
+
 .blog-details-area .blog-details .article-img .date {
   position: absolute;
   bottom: 15px;
@@ -1847,7 +1867,8 @@ img {
   border-radius: 3px;
   font-weight: 400;
 }
-.blog-details-area .blog-details .article-content ul.category li:not(:first-child) a{
+
+.blog-details-area .blog-details .article-content ul.category li:not(:first-child) a {
   margin-left: 8px;
 }
 
@@ -1889,12 +1910,12 @@ img {
   border-radius: 50%;
   color: #db0000;
 }
-.blog-details-area .blog-details .article-content .share-post ul li:not(:first-child) a{
+
+.blog-details-area .blog-details .article-content .share-post ul li:not(:first-child) a {
   margin-left: 8px;
 }
 
-.blog-details-area .blog-details .article-content .share-post ul li a:hover, 
-.blog-details-area .blog-details .article-content .share-post ul li a:focus {
+.blog-details-area .blog-details .article-content .share-post ul li a:hover, .blog-details-area .blog-details .article-content .share-post ul li a:focus {
   color: #ffffff;
   border-color: #db0000;
   background-color: #db0000;
@@ -2664,7 +2685,7 @@ img {
   color: #ffffff;
 }
 
-.btn-custom:hover, .btn-custom:active{
+.btn-custom:hover, .btn-custom:active {
   color: #ffffff !important;
 }
 

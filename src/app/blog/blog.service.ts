@@ -11,7 +11,7 @@ export class BlogService {
   constructor(private _http: HttpClient) { }
 
   fetchAllPosts() {
-    return this._http.get(`${API_URL}/content/posts/?offset=0&limit=0`, {
+    return this._http.get<any>(`${API_URL}/content/posts/?offset=0&limit=0`, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`
       }

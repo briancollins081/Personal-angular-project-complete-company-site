@@ -37,7 +37,7 @@
                         <div class="single-card actical-card">
                             <div class="thumb-img">
                                 <a [routerLink]="['/blog/s', post._id]">
-                                    <img src="http://localhost:9090/{{post.post_image_url}}" alt="News Image" />
+                                    <img src="http://localhost:9090/{{post.post_image_url}}" class="img-fluid" alt="News Image" />
                                 </a>
                             </div>
                             <div class="caption-text">
@@ -46,7 +46,7 @@
                                 <ul class="meta-tag">
                                     <li class="author">
                                         <!-- <img src="assets/img/patient/1.jpg" alt=""> -->
-                                        <img src="https://img.icons8.com/officel/50/000000/user.png" width="100"
+                                        <img src="https://img.icons8.com/officel/50/000000/user.png" 
                                             class="img-fluid" />
                                         <a href="javascript:void()">{{post.author_fname}} {{post.author_lname}}</a>
                                     </li>
@@ -312,7 +312,7 @@
             </div>
 
             <div class="col-lg-4 col-md-12">
-               <app-sidebar></app-sidebar>
+                <app-sidebar></app-sidebar>
             </div>
         </div>
     </div>
