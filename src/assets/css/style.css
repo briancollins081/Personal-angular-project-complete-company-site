@@ -2277,7 +2277,7 @@ img {
 
 .pagination-area ul .page-item .page-link:hover, .pagination-area ul .page-item .page-link:focus {
   color: #ffffff;
-  background: #396cf0;
+  background: #db0000;
 }
 
 .pagination-area ul .page-item .page-link:focus {
@@ -2286,7 +2286,7 @@ img {
 }
 
 .pagination-area ul .page-item.active .page-link {
-  background: #396cf0;
+  background: #db0000;
   color: #ffffff;
 }
 

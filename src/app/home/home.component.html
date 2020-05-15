@@ -727,106 +727,98 @@
             <p>Here are some of our top content. To read more news, articles and other content, visit our blog section.
             </p>
         </div>
-
-        <div class="latest-news-carousel owl-carousel owl-theme owl-theme-2">
-            <div class="single-card actical-card">
-                <div class="thumb-img">
-                    <a [routerLink]="['/blog/s', posts[0]._id]">
-                        <img src="http://localhost:9090/{{posts[0].post_image_url}}" alt="News Image" />
-                    </a>
-                </div>
-
-                <div class="caption-text">
-                    <h3><a [routerLink]="['/blog/s', posts[0]._id]">{{posts[0].post_title}}</a></h3>
-
-                    <ul class="meta-tag">
-                        <li class="author">
-                            <img src="assets/img/patient/1.jpg" alt="">
-                            <a href="javascript:void">{{posts[0].author_fname}}</a>
-                        </li>
-                        <li>{{posts[0].createdAt}}</li>
-                        <li><i class="icofont-speech-comments"></i> 30</li>
-                    </ul>
-
-                    <div [innerHTML]="posts[0].post_title"></div>
-
-                    <a [routerLink]="['/blog/s', posts[0]._id]" class="read-more">Read More <i
-                            class="icofont-swoosh-right"></i></a>
+        <div class="loading" *ngIf="isLoading">
+            <div class="row justify-content-center" *ngIf="isLoading">
+                <div class="col-lg-4">
+                    <p class="text-center">Fetching news</p>
+                    <img class="img-fluid" src="assets/img/loader.gif" alt="">
                 </div>
             </div>
-            <div class="single-card actical-card">
-                <div class="thumb-img">
-                    <a [routerLink]="['/blog/s', posts[1]._id]">
-                        <img src="http://localhost:9090/{{posts[1].post_image_url}}" alt="News Image" />
-                    </a>
-                </div>
+        </div>
+        <div *ngIf="!isLoading">
+            <div class="latest-news-carousel">
+                <div class="row">
+                    <div class="col-12 col-lg-4">
+                        <div class="single-card actical-card">
+                            <div class="thumb-img">
+                                <a [routerLink]="['/blog/s', posts[0]._id]">
+                                    <img src="http://localhost:9090/{{posts[0].post_image_url}}" alt="News Image" />
+                                </a>
+                            </div>
 
-                <div class="caption-text">
-                    <h3><a [routerLink]="['/blog/s', posts[1]._id]">{{posts[1].post_title}}</a></h3>
+                            <div class="caption-text">
+                                <h3><a [routerLink]="['/blog/s', posts[0]._id]">{{posts[0].post_title}}</a></h3>
 
-                    <ul class="meta-tag">
-                        <li class="author">
-                            <img src="assets/img/patient/1.jpg" alt="">
-                            <a href="javascript:void">{{posts[1].author_fname}}</a>
-                        </li>
-                        <li>{{posts[1].createdAt}}</li>
-                        <li><i class="icofont-speech-comments"></i> 30</li>
-                    </ul>
+                                <ul class="meta-tag">
+                                    <li class="author">
+                                        <img src="assets/img/patient/1.jpg" alt="">
+                                        <a href="javascript:void">{{posts[0].author_fname}}</a>
+                                    </li>
+                                    <li>{{posts[0].createdAt}}</li>
+                                    <li><i class="icofont-speech-comments"></i> 30</li>
+                                </ul>
 
-                    <div [innerHTML]="posts[1].post_title"></div>
+                                <div [innerHTML]="posts[0].post_title"></div>
 
-                    <a [routerLink]="['/blog/s', posts[1]._id]" class="read-more">Read More <i
-                            class="icofont-swoosh-right"></i></a>
-                </div>
-            </div>
-            <div class="single-card actical-card">
-                <div class="thumb-img">
-                    <a [routerLink]="['/blog/s', posts[2]._id]">
-                        <img src="http://localhost:9090/{{posts[2].post_image_url}}" alt="News Image" />
-                    </a>
-                </div>
+                                <a [routerLink]="['/blog/s', posts[0]._id]" class="read-more">Read More <i
+                                        class="icofont-swoosh-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="single-card actical-card">
+                            <div class="thumb-img">
+                                <a [routerLink]="['/blog/s', posts[1]._id]">
+                                    <img src="http://localhost:9090/{{posts[1].post_image_url}}" alt="News Image" />
+                                </a>
+                            </div>
 
-                <div class="caption-text">
-                    <h3><a [routerLink]="['/blog/s', posts[2]._id]">{{posts[2].post_title}}</a></h3>
+                            <div class="caption-text">
+                                <h3><a [routerLink]="['/blog/s', posts[1]._id]">{{posts[1].post_title}}</a></h3>
 
-                    <ul class="meta-tag">
-                        <li class="author">
-                            <img src="assets/img/patient/1.jpg" alt="">
-                            <a href="javascript:void">{{posts[2].author_fname}}</a>
-                        </li>
-                        <li>{{posts[2].createdAt}}</li>
-                        <li><i class="icofont-speech-comments"></i> 30</li>
-                    </ul>
+                                <ul class="meta-tag">
+                                    <li class="author">
+                                        <img src="assets/img/patient/1.jpg" alt="">
+                                        <a href="javascript:void">{{posts[1].author_fname}}</a>
+                                    </li>
+                                    <li>{{posts[1].createdAt}}</li>
+                                    <li><i class="icofont-speech-comments"></i> 30</li>
+                                </ul>
 
-                    <div [innerHTML]="posts[2].post_title"></div>
+                                <div [innerHTML]="posts[1].post_title"></div>
 
-                    <a [routerLink]="['/blog/s', posts[2]._id]" class="read-more">Read More <i
-                            class="icofont-swoosh-right"></i></a>
-                </div>
-            </div>
-            <div class="single-card actical-card">
-                <div class="thumb-img">
-                    <a [routerLink]="['/blog/s', posts[2]._id]">
-                        <img src="http://localhost:9090/{{posts[2].post_image_url}}" alt="News Image" />
-                    </a>
-                </div>
+                                <a [routerLink]="['/blog/s', posts[1]._id]" class="read-more">Read More <i
+                                        class="icofont-swoosh-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="single-card actical-card">
+                            <div class="thumb-img">
+                                <a [routerLink]="['/blog/s', posts[2]._id]">
+                                    <img src="http://localhost:9090/{{posts[2].post_image_url}}" alt="News Image" />
+                                </a>
+                            </div>
 
-                <div class="caption-text">
-                    <h3><a [routerLink]="['/blog/s', posts[2]._id]">{{posts[3].post_title}}</a></h3>
+                            <div class="caption-text">
+                                <h3><a [routerLink]="['/blog/s', posts[2]._id]">{{posts[2].post_title}}</a></h3>
 
-                    <ul class="meta-tag">
-                        <li class="author">
-                            <img src="assets/img/patient/1.jpg" alt="">
-                            <a href="javascript:void">{{posts[3].author_fname}}</a>
-                        </li>
-                        <li>{{posts[3].createdAt}}</li>
-                        <li><i class="icofont-speech-comments"></i> 30</li>
-                    </ul>
+                                <ul class="meta-tag">
+                                    <li class="author">
+                                        <img src="assets/img/patient/1.jpg" alt="">
+                                        <a href="javascript:void">{{posts[2].author_fname}}</a>
+                                    </li>
+                                    <li>{{posts[2].createdAt}}</li>
+                                    <li><i class="icofont-speech-comments"></i> 30</li>
+                                </ul>
 
-                    <div [innerHTML]="posts[3].post_title"></div>
+                                <div [innerHTML]="posts[2].post_title"></div>
 
-                    <a [routerLink]="['/blog/s', posts[3]._id]" class="read-more">Read More <i
-                            class="icofont-swoosh-right"></i></a>
+                                <a [routerLink]="['/blog/s', posts[2]._id]" class="read-more">Read More <i
+                                        class="icofont-swoosh-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

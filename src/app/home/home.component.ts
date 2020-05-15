@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { BlogService } from '../blog/blog.service';
 import { NormalPost } from '../blog/post';
+import { compareFromLatest } from "../constants";
 
 declare const $: any;
 
@@ -11,7 +12,7 @@ declare const $: any;
 })
 export class HomeComponent implements OnInit, AfterViewInit {
   posts: NormalPost[] = [];
-  isLoading: boolean = false;
+  isLoading: boolean = true;
   // post = null;
   constructor(private blogService: BlogService) { }
 
@@ -21,11 +22,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.blogService.fetchAllPostsPagination(0, 10)
+    this.blogService.fetchAllPosts()
       .subscribe(res => {
         this.posts = res.data.posts;
+        this.posts = this.posts.sort(compareFromLatest).slice(0,3);
         this.isLoading = false;
-        console.log('posts', this.posts);
+        // console.log('posts', this.posts);
       }, error => {
         alert(`Error, ${error.message}`)
       })
@@ -85,14 +87,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
       fixedContentPos: false
     });
 
-    // Latest news Carousel JS
-    $('.latest-news-carousel').owlCarousel({
+    $('.feedback-carousel').owlCarousel({
       loop: true,
       nav: true,
       autoplay: true,
       autoplayHoverPause: true,
       mouseDrag: false,
       margin: 30,
+      center: true,
       dots: false,
       navText: [
         "<i class='icofont-swoosh-left'></i>",
@@ -105,11 +107,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
         768: {
           items: 2
         },
-        1000: {
+        1200: {
           items: 3
         }
       }
     });
-
   }
 }

@@ -7,7 +7,7 @@ import { API_URL } from '../constants';
   providedIn: 'root'
 })
 export class BlogService {
-
+  private pageCount:number = 4;
   constructor(private _http: HttpClient) { }
 
   fetchAllPosts() {
@@ -18,9 +18,10 @@ export class BlogService {
     })
   }
   fetchAllPostsPagination(offsetZeroBased: number, limit: number) {
+    offsetZeroBased = offsetZeroBased * this.pageCount;
     return this._http.get<any>(`${API_URL}/content/posts/?offset=${offsetZeroBased}&limit=${limit}`, {
       headers: {
-        Authorization: `Bearer ${localStorage.getItem('token')}`
+        'Content-Type': 'application/json'
       }
     })
   }

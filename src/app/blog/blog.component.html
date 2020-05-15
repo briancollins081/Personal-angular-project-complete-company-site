@@ -37,7 +37,8 @@
                         <div class="single-card actical-card">
                             <div class="thumb-img">
                                 <a [routerLink]="['/blog/s', post._id]">
-                                    <img src="http://localhost:9090/{{post.post_image_url}}" class="img-fluid" alt="News Image" />
+                                    <img src="http://localhost:9090/{{post.post_image_url}}" class="img-fluid"
+                                        alt="News Image" />
                                 </a>
                             </div>
                             <div class="caption-text">
@@ -46,7 +47,7 @@
                                 <ul class="meta-tag">
                                     <li class="author">
                                         <!-- <img src="assets/img/patient/1.jpg" alt=""> -->
-                                        <img src="https://img.icons8.com/officel/50/000000/user.png" 
+                                        <img src="https://img.icons8.com/officel/50/000000/user.png"
                                             class="img-fluid" />
                                         <a href="javascript:void()">{{post.author_fname}} {{post.author_lname}}</a>
                                     </li>
@@ -54,10 +55,29 @@
                                     <!-- <li><i class="icofont-speech-comments"></i> 30</li> -->
                                 </ul>
 
-                                <div [innerHTML]="post.introduction"></div>
+                                <!-- <div [innerHTML]="post.introduction"></div> -->
                                 <a [routerLink]="['/blog/s', post._id]" [queryParams]="{debug: true}"
                                     class="read-more">Read More <i class="icofont-swoosh-right"></i></a>
                             </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12">
+                        <div class="pagination-area">
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item" (click)="fetchPrevious()"><a href="javascript:void"
+                                            class="page-link"><i class="icofont-hand-drawn-left"></i></a></li>
+                                    <li class="page-item" [ngClass]="{'active': currentPage === 0}"
+                                        (click)="fetchPage(0)"><a href="javascript:void" class="page-link">1</a></li>
+                                    <span *ngFor="let page of pages; let i=index">
+                                        <li class="page-item" [ngClass]="{'active': currentPage === i}"
+                                            (click)="fetchPage(i)" *ngIf="i !== 0">
+                                            <a class="page-link" href="javascript:void">{{i+1}}</a></li>
+                                    </span>
+                                    <li class="page-item" (click)="fetchNext()"><a href="javascript:void"
+                                            class="page-link"><i class="icofont-hand-drawn-right"></i></a></li>
+                                </ul>
+                            </nav>
                         </div>
                     </div>
                     <!-- <div class="col-lg-6 col-md-6">
