@@ -16,7 +16,7 @@
         </div>
         <div class="single-post" *ngFor="let post of latestPosts">
             <div class="img">
-                <a [routerLink]="['/blog/s', post._id]"><img src="http://localhost:9090/{{post.post_image_url}}"
+                <a [routerLink]="['/blog/s', post._id]"><img src="{{API_URL}}/{{post.post_image_url}}"
                         alt="latest-post"></a>
             </div>
 

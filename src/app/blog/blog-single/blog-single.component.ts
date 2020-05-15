@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BlogService } from '../blog.service';
 import { NormalPost } from '../post';
+import { API_URL } from 'src/app/constants';
 
 @Component({
   selector: 'app-blog-single',
@@ -26,6 +27,8 @@ export class BlogSingleComponent implements OnInit, OnDestroy {
 
     introduction: "",
   };
+
+  API_URL = API_URL;
   constructor(
     private route: ActivatedRoute,
     private blogService: BlogService

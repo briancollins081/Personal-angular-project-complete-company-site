@@ -29,7 +29,8 @@
                 </div>
                 <div class="row" *ngIf="!isLoading && posts.length <= 0">
                     <div class="col">
-                        <h5 class="my-5 text-center error">No posts at the momment. Try again later...</h5>
+                        <h5 class="my-5 text-center error">No more posts at the momment. Try again later...</h5>
+                        <a [routerLink]="'/blog'" (click)="fetchPrevious()" class="default-btn"><i class="icofont-rounded-double-left"></i>&nbsp;&nbsp;Back</a>
                     </div>
                 </div>
                 <div class="row" *ngIf="!isLoading && posts.length > 0">
@@ -37,7 +38,7 @@
                         <div class="single-card actical-card">
                             <div class="thumb-img">
                                 <a [routerLink]="['/blog/s', post._id]">
-                                    <img src="http://localhost:9090/{{post.post_image_url}}" class="img-fluid"
+                                    <img src="{{API_URL}}/{{post.post_image_url}}" class="img-fluid"
                                         alt="News Image" />
                                 </a>
                             </div>

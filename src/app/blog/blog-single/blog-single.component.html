@@ -23,7 +23,7 @@
             <div class="col-lg-8 col-md-12">
                 <div class="blog-details">
                     <div class="article-img">
-                        <img src="http://localhost:9090/{{post.post_image_url}}" alt="blog-details">
+                        <img src="{{API_URL}}/{{post.post_image_url}}" alt="blog-details">
                         <div class="date" [innerHTML]="post.createdAt"></div>
                     </div>
 

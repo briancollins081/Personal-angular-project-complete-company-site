@@ -1,6 +1,6 @@
 import { NormalPost } from './blog/post';
 
-export const API_URL = `http://localhost:9090`
+export const API_URL = `https://afyarekod-blog-api.azurewebsites.net`
 
 export const compareFromLatest = (a: NormalPost, b: NormalPost) => {
     let ad: number = new Date(a.createdAt).getTime();

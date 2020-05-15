@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { NormalPost } from '../post';
 import { BlogService } from '../blog.service';
-import { compareFromLatest } from 'src/app/constants';
+import { compareFromLatest, API_URL } from 'src/app/constants';
 
 declare const $: any;
 
@@ -13,6 +13,7 @@ declare const $: any;
 export class SidebarComponent implements OnInit, AfterViewInit {
   isLoading: boolean = true;
   latestPosts: NormalPost[] = [];
+  API_URL = API_URL;
 
   constructor(private blogService: BlogService) { }
 

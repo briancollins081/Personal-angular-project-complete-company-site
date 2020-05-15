@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogService } from './blog.service';
 import { NormalPost } from './post';
-import { compareFromLatest } from '../constants';
-import { Router, NavigationEnd } from '@angular/router';
+import { compareFromLatest, API_URL } from '../constants';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-blog',
@@ -19,7 +19,7 @@ export class BlogComponent implements OnInit {
   currentPage: number = 0;
   totalPosts: number = 0;
 
-  // latestPosts: NormalPost[] = [];
+  API_URL = API_URL;
 
   constructor(
     private blogService: BlogService,

@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { BlogService } from '../blog/blog.service';
 import { NormalPost } from '../blog/post';
-import { compareFromLatest } from "../constants";
+import { compareFromLatest, API_URL } from "../constants";
 
 declare const $: any;
 
@@ -13,6 +13,7 @@ declare const $: any;
 export class HomeComponent implements OnInit, AfterViewInit {
   posts: NormalPost[] = [];
   isLoading: boolean = true;
+  API_URL = API_URL;
   // post = null;
   constructor(private blogService: BlogService) { }
 
