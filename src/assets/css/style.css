@@ -845,8 +845,8 @@ img {
 }
 
 .services-section {
-  background-attachment: fixed;
-  background-image: url(assets/img/bg.png);
+  /* background-attachment: fixed;
+  background-image: url(assets/img/bg.png); */
   padding-bottom: 70px;
 }
 
@@ -1454,7 +1454,6 @@ img {
 ------------------------------------*/
 
 .call-to-action {
-  background-image: url("../img/slider/1.jpg");
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
@@ -1565,7 +1564,6 @@ img {
 
 .cta-area .cta-doctor-img .img {
   max-width: 300px;
-  background-image: url(assets/img/announcement.jpg);
   background-size: cover;
 }
 

@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { NormalPost } from '../post';
 import { BlogService } from '../blog.service';
-import { compareFromLatest, API_URL } from 'src/app/constants';
+import { compareFromOldest, API_URL } from 'src/app/constants';
 
 declare const $: any;
 
@@ -26,7 +26,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
             p.updatedAt = new Date(p.updatedAt).toLocaleDateString();
             p.introduction = p.post_content.substr(0, p.post_content.indexOf('</p>') > 0 ? p.post_content.indexOf('</p>') : 200)
           });
-          this.latestPosts = this.latestPosts.sort(compareFromLatest).slice(0, 5);
+          this.latestPosts = this.latestPosts.sort(compareFromOldest).slice(0, 5);
           this.isLoading = false;
 
         },

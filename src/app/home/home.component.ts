@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { BlogService } from '../blog/blog.service';
 import { NormalPost } from '../blog/post';
-import { compareFromLatest, API_URL } from "../constants";
+import { API_URL, compareFromOldest } from "../constants";
 
 declare const $: any;
 
@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.blogService.fetchAllPosts()
       .subscribe(res => {
         this.posts = res.data.posts;
-        this.posts = this.posts.sort(compareFromLatest).slice(0,3);
+        this.posts = this.posts.sort(compareFromOldest).slice(0,3);
         this.isLoading = false;
         // console.log('posts', this.posts);
       }, error => {
