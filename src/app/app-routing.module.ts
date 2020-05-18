@@ -29,6 +29,10 @@ const routes: Routes = [
   {
     path: 'forum',
     loadChildren: () => import('./forum/forum.module').then(m => m.ForumModule)
+  },
+  {
+    path: 'demo',
+    loadChildren: () => import('./demo/demo.module').then(m => m.DemoModule)
   }
 ];
 

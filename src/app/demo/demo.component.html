@@ -1,0 +1,251 @@
+<div class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-7">
+                <h2>Demo</h2>
+            </div>
+
+            <div class="col-md-6 col-lg-5">
+                <ul>
+                    <li><a [routerLink]="'/home'">Home</a></li>
+                    <li>Demo</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container hero-container outline">
+    <section class="hero-section outline">
+        <div class="hero-left outline">
+            <!-- <div class="vincent-logo" style="background-image: url(assets/img/mainlogo.png);"> </div> -->
+            <div class="beta pb-4">Version 1.0.1</div>
+            <h1 style="text-transform: capitalize;">Your number one health history mobile app.</h1>
+            <p class="pb-4">
+                An easy way for to keep track of your health history, medications and prescriptions. Organizations can
+                now manage their patients in a data driven approch employing AI and Data analytics
+            </p>
+            <div class="download pb-4">
+                <!-- <a class="cta applestore" href="https://apps.apple.com/us/app/vincentapp/id1448408242"
+                    title="Download Vincent from App Store">
+                    <svg width="143" height="46" viewBox="0 0 119 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.445 39.125c-.305 0-.602-.004-.904-.01a12.682 12.682 0 01-1.87-.164 5.884 5.884 0 01-1.656-.548 5.406 5.406 0 01-1.397-1.016 5.32 5.32 0 01-1.02-1.397 5.722 5.722 0 01-.544-1.657 12.413 12.413 0 01-.166-1.875c-.007-.21-.015-.913-.015-.913v-23.1s.009-.692.015-.895a12.37 12.37 0 01.165-1.872 5.755 5.755 0 01.544-1.662c.26-.518.603-.99 1.015-1.398A5.565 5.565 0 015.668 1.05C6.288.95 6.915.895 7.543.887l.902-.012h102.769l.913.013a12.37 12.37 0 011.858.162 5.933 5.933 0 011.671.548 5.589 5.589 0 012.415 2.42c.261.52.441 1.076.536 1.65.103.623.161 1.254.173 1.886.003.284.003.588.003.89.008.375.008.732.008 1.092v20.929c0 .363 0 .718-.008 1.075 0 .325 0 .623-.004.93-.011.621-.068 1.24-.171 1.853a5.716 5.716 0 01-.54 1.67 5.47 5.47 0 01-1.015 1.386c-.409.414-.881.76-1.4 1.023a5.852 5.852 0 01-1.668.55c-.618.1-1.243.155-1.869.162-.293.007-.599.011-.897.011l-1.084.002-101.69-.002z"
+                            fill="#000" />
+                        <path
+                            d="M24.769 20.3a4.949 4.949 0 012.356-4.151 5.065 5.065 0 00-3.99-2.158c-1.68-.176-3.308 1.005-4.164 1.005-.872 0-2.19-.987-3.608-.958a5.315 5.315 0 00-4.473 2.728c-1.934 3.348-.492 8.27 1.361 10.976.927 1.325 2.01 2.805 3.428 2.753 1.387-.058 1.905-.885 3.58-.885 1.658 0 2.144.885 3.59.852 1.489-.024 2.426-1.332 3.32-2.67a10.963 10.963 0 001.52-3.092 4.782 4.782 0 01-2.92-4.4zM22.037 12.211a4.872 4.872 0 001.115-3.49 4.957 4.957 0 00-3.208 1.659 4.636 4.636 0 00-1.143 3.361 4.099 4.099 0 003.236-1.53z"
+                            fill="#fff" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M37.569 27.14h4.733l1.136 3.356h2.039l-4.483-12.418H38.91l-4.484 12.418h2.005l1.137-3.356zm4.242-1.55H38.06l1.85-5.446h.053l1.85 5.447zM51.381 30.59c2.273 0 3.779-1.807 3.779-4.62 0-2.806-1.515-4.622-3.813-4.622a3.211 3.211 0 00-2.883 1.6h-.034v-1.506h-1.799v12.05h1.859v-4.485h.043a3.07 3.07 0 002.848 1.584zm-.524-7.658c1.445 0 2.392 1.205 2.392 3.038 0 1.85-.947 3.046-2.392 3.046-1.42 0-2.375-1.222-2.375-3.046 0-1.808.955-3.038 2.375-3.038zM61.346 30.59c2.273 0 3.779-1.807 3.779-4.62 0-2.806-1.515-4.622-3.813-4.622a3.211 3.211 0 00-2.883 1.6h-.034v-1.506h-1.799v12.05h1.859v-4.485h.043a3.07 3.07 0 002.848 1.584zm-.524-7.658c1.445 0 2.392 1.205 2.392 3.038 0 1.85-.947 3.046-2.392 3.046-1.42 0-2.375-1.222-2.375-3.046 0-1.808.955-3.038 2.375-3.038z"
+                            fill="#fff" />
+                        <path
+                            d="M71.71 27.036c.138 1.232 1.334 2.04 2.97 2.04 1.566 0 2.693-.808 2.693-1.919 0-.964-.68-1.54-2.29-1.936l-1.609-.388c-2.28-.55-3.339-1.617-3.339-3.348 0-2.142 1.867-3.614 4.519-3.614 2.624 0 4.423 1.472 4.483 3.614h-1.876c-.112-1.239-1.136-1.987-2.634-1.987-1.497 0-2.521.757-2.521 1.858 0 .878.654 1.395 2.255 1.79l1.368.337c2.548.602 3.606 1.625 3.606 3.442 0 2.323-1.85 3.778-4.793 3.778-2.754 0-4.614-1.42-4.734-3.667h1.902zM83.346 19.3v2.142h1.722v1.472h-1.722v4.991c0 .776.345 1.137 1.102 1.137.204-.004.408-.018.611-.043v1.463c-.34.064-.686.092-1.032.086-1.833 0-2.548-.688-2.548-2.444v-5.19h-1.316v-1.472h1.316V19.3h1.867z"
+                            fill="#fff" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M90.359 21.331c-2.616 0-4.294 1.79-4.294 4.639 0 2.856 1.661 4.639 4.294 4.639 2.634 0 4.295-1.783 4.295-4.64 0-2.848-1.67-4.638-4.295-4.638zm0 1.531c1.506 0 2.401 1.154 2.401 3.108 0 1.962-.895 3.106-2.401 3.106-1.506 0-2.4-1.144-2.4-3.106 0-1.945.894-3.108 2.4-3.108z"
+                            fill="#fff" />
+                        <path
+                            d="M96.186 21.442h1.772v1.541h.043a2.16 2.16 0 012.178-1.635c.214-.001.428.022.637.07v1.737a2.594 2.594 0 00-.835-.112 1.872 1.872 0 00-1.937 2.083v5.37h-1.858v-9.053z"
+                            fill="#fff" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M105.486 30.608c2.048 0 3.648-1.127 3.898-2.771h-1.764a2.049 2.049 0 01-2.091 1.273 2.36 2.36 0 01-2.436-2.564v-.112h6.395v-.637c0-2.745-1.575-4.466-4.08-4.466-2.547 0-4.191 1.842-4.191 4.682 0 2.83 1.635 4.595 4.269 4.595zm2.142-5.473h-4.526a2.29 2.29 0 012.306-2.298 2.177 2.177 0 012.22 2.298zM39.932 9.549a2.64 2.64 0 00-2.106-.818h-2.155v5.967h2.155c1.777 0 2.808-1.096 2.808-3.002a2.64 2.64 0 00-.702-2.147zm-2.21 4.305h-1.124v-4.28h1.125a1.881 1.881 0 011.967 2.134 1.876 1.876 0 01-1.967 2.146zM42.68 10.429a2.133 2.133 0 00-1 2.015 2.133 2.133 0 104.248 0 2.133 2.133 0 00-3.249-2.015zm1.126.469c.77 0 1.208.57 1.208 1.546 0 .98-.439 1.55-1.208 1.55-.773 0-1.207-.566-1.207-1.55 0-.976.434-1.546 1.207-1.546z"
+                            fill="#fff" />
+                        <path
+                            d="M51.573 14.698h-.922l-.93-3.316h-.07l-.927 3.316h-.913l-1.242-4.503h.902l.806 3.436h.067l.925-3.436h.853l.926 3.436h.07l.803-3.436h.889l-1.237 4.503zM53.853 10.195h.856v.715h.066c.231-.526.771-.849 1.344-.802a1.465 1.465 0 011.559 1.675v2.915h-.889v-2.692c0-.724-.314-1.084-.972-1.084a1.033 1.033 0 00-1.075 1.142v2.634h-.889v-4.503zM59.094 8.437h.888v6.26h-.888v-6.26z"
+                            fill="#fff" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M62.217 10.429a2.133 2.133 0 00-1 2.015 2.134 2.134 0 104.248 0 2.133 2.133 0 00-3.248-2.015zm1.126.469c.77 0 1.208.57 1.208 1.546 0 .98-.439 1.55-1.208 1.55-.773 0-1.207-.566-1.207-1.55 0-.976.434-1.546 1.207-1.546zM68.076 12.08c-1.072.067-1.675.534-1.675 1.345a1.36 1.36 0 001.5 1.347 1.515 1.515 0 001.353-.707h.07v.633h.856V11.62c0-.95-.637-1.513-1.765-1.513-1.022 0-1.75.496-1.84 1.27h.86c.099-.319.442-.5.939-.5.607 0 .921.268.921.743v.389l-1.22.07zm1.22.583v.377a1.061 1.061 0 01-1.167.984c-.483 0-.835-.236-.835-.641 0-.397.282-.608.902-.65l1.1-.07zM73.217 10.12c-1.137 0-1.869.902-1.869 2.325 0 1.426.724 2.327 1.87 2.327a1.563 1.563 0 001.413-.786h.07v.712h.852v-6.26h-.888v2.472h-.067a1.484 1.484 0 00-1.38-.79zm.252 3.854c-.753 0-1.203-.574-1.203-1.53 0-.947.455-1.525 1.203-1.525.744 0 1.212.59 1.212 1.53 0 .942-.463 1.525-1.212 1.525zM80.229 10.429a2.133 2.133 0 00-.999 2.015 2.133 2.133 0 104.247 0 2.133 2.133 0 00-3.248-2.015zm1.126.469c.77 0 1.208.57 1.208 1.546 0 .98-.439 1.55-1.208 1.55-.773 0-1.207-.566-1.207-1.55 0-.976.434-1.546 1.207-1.546z"
+                            fill="#fff" />
+                        <path
+                            d="M84.67 10.195h.855v.715h.066c.231-.526.77-.849 1.344-.802a1.465 1.465 0 011.559 1.675v2.915h-.889v-2.692c0-.724-.315-1.084-.972-1.084a1.033 1.033 0 00-1.075 1.142v2.634h-.889v-4.503zM93.515 9.074v1.142h.976v.748h-.976v2.315c0 .472.195.679.637.679.113 0 .226-.008.339-.02v.74c-.16.028-.322.043-.484.045-.988 0-1.382-.348-1.382-1.216v-2.543h-.714v-.749h.715V9.074h.89zM95.705 8.437h.88v2.482h.07a1.386 1.386 0 011.374-.807 1.483 1.483 0 011.55 1.679v2.907h-.889V12.01c0-.72-.335-1.084-.963-1.084a1.052 1.052 0 00-1.134 1.142v2.63h-.888v-6.26z"
+                            fill="#fff" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M102.81 14.785a1.828 1.828 0 001.951-1.303h-.855a1.08 1.08 0 01-1.072.546 1.188 1.188 0 01-1.199-1.29v-.05h3.18v-.31c0-1.414-.756-2.27-2.009-2.27a2.078 2.078 0 00-2.076 2.353 2.044 2.044 0 002.08 2.324zm1.1-2.754h-2.275a1.154 1.154 0 011.166-1.167 1.086 1.086 0 011.109 1.167z"
+                            fill="#fff" />
+                    </svg>
+                </a> -->
+                <a class="cta googleplay" href="https://play.google.com/store/apps/details?id=app.afya.rekod"
+                    target="_blank" title="Download AfyaRekod from Google Play">
+                    <svg width="156" height="45" viewBox="0 0 129 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="128.25" height="38" rx="4.75" fill="#000" />
+                        <path
+                            d="M45.049 9.728a2.584 2.584 0 01-.713 1.9 2.755 2.755 0 01-2.09.836 2.85 2.85 0 01-2.1-.855 3.03 3.03 0 010-4.237 3.002 3.002 0 013.269-.618c.343.141.648.36.893.637l-.504.503a1.9 1.9 0 00-1.558-.684 2.28 2.28 0 101.596 3.924c.29-.318.459-.729.475-1.159h-2.07v-.684h2.764c.022.145.034.29.038.437zM49.4 7.353h-2.565v1.805h2.337v.684h-2.337v1.805H49.4v.703h-3.306v-5.7H49.4v.703zM52.516 12.35h-.732V7.353h-1.596V6.65h3.962v.703h-1.634v4.997zM56.943 12.35v-5.7h.731v5.7h-.731zM60.923 12.35h-.731V7.353h-1.596V6.65h3.914v.703h-1.587v4.997z"
+                            fill="#fff" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M67.84 12.475c.783 0 1.535-.311 2.09-.866a2.85 2.85 0 00.835-2.109 2.916 2.916 0 00-.836-2.109 2.85 2.85 0 00-2.09-.865 2.784 2.784 0 00-2.09.865 3.078 3.078 0 000 4.218 2.955 2.955 0 002.09.866zm0-.694c-.583 0-1.14-.233-1.55-.647a2.413 2.413 0 010-3.268 2.176 2.176 0 013.098 0c.85.924.85 2.344 0 3.268a2.176 2.176 0 01-1.549.647z"
+                            fill="#fff" />
+                        <path d="M71.8 12.35v-5.7h.884l2.774 4.436V6.65h.732v5.7h-.76l-2.898-4.646v4.646h-.731z"
+                            fill="#fff" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M45.353 21.907v1.71h4.104a3.581 3.581 0 01-.95 2.156 4.199 4.199 0 01-3.173 1.255 4.56 4.56 0 010-9.12 4.407 4.407 0 013.116 1.225l1.206-1.206a5.985 5.985 0 00-4.303-1.73 6.28 6.28 0 100 12.55 5.767 5.767 0 004.38-1.758 5.7 5.7 0 001.481-4.018 5.955 5.955 0 00-.085-1.064h-5.776zm10.526-1.244a4.047 4.047 0 104.056 4.037 3.98 3.98 0 00-4.056-4.037zm4.816 4.056a4.047 4.047 0 014.038-4.056 3.98 3.98 0 014.056 4.037 4.047 4.047 0 11-8.094.019zm1.655 1.043a2.451 2.451 0 002.383 1.389 2.337 2.337 0 002.28-2.451 2.45 2.45 0 10-4.663 1.063zm-8.854 0a2.451 2.451 0 002.383 1.389 2.337 2.337 0 002.28-2.451 2.45 2.45 0 10-4.663 1.063zm31.443-5.1a3.8 3.8 0 013.458 2.575l.2.418-5.406 2.232a2.043 2.043 0 001.957 1.226 2.29 2.29 0 001.986-1.111l1.377.95A4.018 4.018 0 0181.14 24.7a3.8 3.8 0 013.8-4.037zm-2.052 3.924a2.223 2.223 0 012.119-2.365 1.558 1.558 0 011.491.864l-3.61 1.501zM80.275 28.5h-1.777V16.625h1.777V28.5zm-4.684-6.935h-.066a2.793 2.793 0 00-2.128-.95 4.047 4.047 0 000 8.085 2.736 2.736 0 002.128-.95h.066v.579c0 1.549-.826 2.375-2.156 2.375a2.242 2.242 0 01-2.043-1.434l-1.539.636a3.8 3.8 0 003.582 2.394c2.08 0 3.8-1.225 3.8-4.208V20.9H75.59v.665zm-4.34 3.14a2.451 2.451 0 002.298 2.446 2.261 2.261 0 002.166-2.451 2.27 2.27 0 00-2.166-2.441 2.451 2.451 0 00-2.299 2.446zm25.468-8.08h-4.256V28.5h1.777v-4.503h2.48a3.697 3.697 0 100-7.372zm-2.48 5.7h2.48l.038.019a2.033 2.033 0 000-4.066H94.24v4.047zm13.443-1.7a3.315 3.315 0 00-3.163 1.814l1.567.655c.324-.583.96-.922 1.625-.864a1.712 1.712 0 011.9 1.53v.113a3.97 3.97 0 00-1.853-.456c-1.691 0-3.42.95-3.42 2.68a2.75 2.75 0 002.955 2.612 2.517 2.517 0 002.261-1.159h.057v.95h1.71v-4.57c0-2.08-1.577-3.287-3.601-3.287l-.038-.018zm-1.605 5.5c0 .712.807 1.007 1.387 1.007l.038.019a2.147 2.147 0 002.09-1.9 3.154 3.154 0 00-1.615-.399c-.893 0-1.9.323-1.9 1.273zm11.476-5.225l-2.033 5.149h-.057l-2.109-5.149h-1.9l3.163 7.201-1.805 4h1.853l4.864-11.201h-1.976zm-14.193 7.6h-1.767V16.625h1.767V28.5z"
+                            fill="#fff" />
+                        <path
+                            d="M9.918 7.163a1.9 1.9 0 00-.447 1.33v21.014c-.032.485.129.963.447 1.33l.066.076 11.771-11.77v-.285L9.985 7.096l-.067.067z"
+                            fill="url(#paint0_linear)" />
+                        <path
+                            d="M25.65 23.066l-3.895-3.924v-.284l3.895-3.924.085.057 4.665 2.641c1.33.75 1.33 1.985 0 2.745l-4.645 2.642-.105.047z"
+                            fill="url(#paint1_linear)" />
+                        <path d="M25.764 23.009L21.755 19 9.918 30.837c.554.493 1.38.521 1.966.067l13.88-7.895z"
+                            fill="url(#paint2_linear)" />
+                        <path d="M25.764 14.991l-13.88-7.885a1.53 1.53 0 00-1.966.057L21.755 19l4.009-4.009z"
+                            fill="url(#paint3_linear)" />
+                        <defs>
+                            <linearGradient id="paint0_linear" x1="16.598" y1="-7.174" x2="-2.251" y2="-2.157"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#00A0FF" />
+                                <stop offset=".01" stop-color="#00A1FF" />
+                                <stop offset=".26" stop-color="#00BEFF" />
+                                <stop offset=".51" stop-color="#00D2FF" />
+                                <stop offset=".76" stop-color="#00DFFF" />
+                                <stop offset="1" stop-color="#00E3FF" />
+                            </linearGradient>
+                            <linearGradient id="paint1_linear" x1="32.139" y1="9.31" x2="9.158" y2="9.31"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FFE000" />
+                                <stop offset=".41" stop-color="#FFBD00" />
+                                <stop offset=".78" stop-color="orange" />
+                                <stop offset="1" stop-color="#FF9C00" />
+                            </linearGradient>
+                            <linearGradient id="paint2_linear" x1="9.583" y1="12.844" x2="-5.58" y2="38.303"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FF3A44" />
+                                <stop offset="1" stop-color="#C31162" />
+                            </linearGradient>
+                            <linearGradient id="paint3_linear" x1=".679" y1="3.894" x2="7.445" y2="15.263"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#32A071" />
+                                <stop offset=".07" stop-color="#2DA771" />
+                                <stop offset=".48" stop-color="#15CF74" />
+                                <stop offset=".8" stop-color="#06E775" />
+                                <stop offset="1" stop-color="#00F076" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </a>
+            </div>
+            <h6 class="mb-5">* Coming soon on <strong>Apple Store.</strong></h6>
+            <a class="ml-1 mt-auto" href="javascript:void()" title="Free Trial">Free
+                trial <i class="icofont-rounded-double-right"></i></a>
+        </div>
+        <div class="hero-right outline">
+            <div class="product-anim"> <img src="assets/img/demoapp/device-s-fs8.8e7097d5.png"
+                    alt="Vincent iOS Application preview">
+                <video autoplay muted loop playsinline="">
+                    <source src="assets/img/demoapp/vincent-c.9d7003b4.mp4" type="video/mp4"> </video> </div>
+        </div>
+    </section>
+</div>
+
+<div class="container top-story-container outline">
+    <section class="top-story-section outline">
+        <div class="top-story-left outline">
+            <h3>Easily record your health journal for future reference</h3>
+            <p>
+                Keep track of your health state on a daily basis. This can become handy for your doctor incase
+                of a random disease or infection later on.
+            </p>
+            <p>
+                As a parent or guardian of a child or a sick person, AfyaRekod offers
+                you an easy way to keep track of the symptoms, states and transtions for your subject for your doctor.
+            </p>
+            <a href="https://play.google.com/store/apps/details?id=app.afya.rekod"
+                title="Available on Google Playstore">Available on Google Playstore&nbsp;&nbsp;
+                <i class="icofont-rounded-double-right"></i>
+            </a>
+        </div>
+        <div class="top-story-right outline">
+            <img src="assets/img/demoapp/highlight-1-s-fs8.68d93c2d.png" alt="Highlights">
+        </div>
+    </section>
+</div>
+
+<div class="container bottom-story-container outline">
+    <section class="bottom-story-section outline">
+        <div class="bottom-story-left outline"> <img src="assets/img/demoapp/highlight-2-s-fs8.fc277f26.png"
+                alt="Highlights"> </div>
+        <div class="bottom-story-right outline">
+            <h3>Keep track of your medication</h3>
+            <p>
+                Store your medication history through the mobile app and USSD, get to know where and when you took a
+                particular drug.
+            </p>
+            <p>
+                This comes in handy in ensuring that your health specialist is up to date with the types of medicines
+                you have been taking before.
+            </p>
+            <a href="https://play.google.com/store/apps/details?id=app.afya.rekod"
+                title="Available on Google Playstore">Available on Google Playstore&nbsp;&nbsp;
+                <i class="icofont-rounded-double-right"></i>
+            </a>
+        </div>
+    </section>
+</div>
+<div class="container top-story-container outline">
+    <section class="top-story-section outline">
+        <div class="top-story-left outline">
+            <h3>Save your prescriptions/doctors notes</h3>
+            <p>
+                The app provides you with a straight forward way to keep and record your prescriptions in form of text
+                entry or images.
+            </p>
+            <p>
+                You can then access these records in a timeline manner and share them with your professional.
+            </p>
+            <a href="https://play.google.com/store/apps/details?id=app.afya.rekod"
+                title="Available on Google Playstore">Available on Google Playstore&nbsp;&nbsp;
+                <i class="icofont-rounded-double-right"></i>
+            </a>
+        </div>
+        <div class="top-story-right outline">
+            <img src="assets/img/demoapp/highlight-1-s-fs8.68d93c2d.png" alt="Highlights">
+        </div>
+    </section>
+</div>
+
+<div class="container bottom-story-container outline">
+    <section class="bottom-story-section outline">
+        <div class="bottom-story-left outline"> <img src="assets/img/demoapp/highlight-2-s-fs8.fc277f26.png"
+                alt="Highlights"> </div>
+        <div class="bottom-story-right outline">
+            <h3>Self assessments and surveys</h3>
+            <p>
+                Take self assessments to evaluate your health including recent diseases and infections.
+            </p>
+            <p>
+               Also you can participate in surveys and earn Afya Points and cash through the app.
+            </p>
+            <a href="https://play.google.com/store/apps/details?id=app.afya.rekod"
+                title="Available on Google Playstore">Available on Google Playstore&nbsp;&nbsp;
+                <i class="icofont-rounded-double-right"></i>
+            </a>
+        </div>
+    </section>
+</div>
+
+<div class="container benefits-container outline">
+    <section class="benefits-section outline">
+        <div class="benefits-left outline">
+            <h5>Other features</h5>
+            <h3>Available for you ...</h3>
+            <ul>
+                <li>
+                    <h4>Realtime Chat</h4>
+                    <p>Organizations, doctors and patients have access to live chat support.</p>
+                </li>
+                <li>
+                    <h4>Patient Education</h4>
+                    <p>Through online content, posts and shared resources.</p>
+                </li>
+                <li>
+                    <h4>Extended Healthcare</h4>
+                    <p>Access to your health organization through the app.</p>
+                </li>
+                <li>
+                    <h4>Telemedicine</h4>
+                    <p>Access to some medical services from anywhere through your phone</p>
+                </li>
+            </ul>
+        </div>
+        <div class="benefits-right outline"> <img src="assets/img/demoapp/pricing-s-fs8.923898f1.png" alt="Pricing">
+        </div>
+    </section>
+</div>
