@@ -21,6 +21,14 @@ const routes: Routes = [
   {
     path: 'about',
     loadChildren: () => import('./about/about.module').then(m => m.AboutModule)
+  },
+  {
+    path: 'members',
+    loadChildren: () => import('./members/members.module').then(m => m.MembersModule)
+  },
+  {
+    path: 'forum',
+    loadChildren: () => import('./forum/forum.module').then(m => m.ForumModule)
   }
 ];
 
