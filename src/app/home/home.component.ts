@@ -30,8 +30,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
         this.isLoading = false;
         // console.log('posts', this.posts);
       }, error => {
-        alert(`Error, ${error.message}`)
-      })
+        console.log("Error retriving posts")
+      });
   }
 
   delay(ms: number) {

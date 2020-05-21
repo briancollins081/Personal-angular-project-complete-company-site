@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DemoComponent } from './demo.component';
 import { Routes, RouterModule } from '@angular/router';
-import { FreetrialComponent } from './freetrial/freetrial.component';
+// import { FreetrialComponent } from './freetrial/freetrial.component';
 
 const routes:Routes = [
   {
@@ -12,7 +12,10 @@ const routes:Routes = [
 ]
 
 @NgModule({
-  declarations: [DemoComponent, FreetrialComponent],
+  declarations: [
+    DemoComponent, 
+    // FreetrialComponent
+  ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes)
