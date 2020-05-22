@@ -23,7 +23,8 @@
                     <h3 class="title">Address Information</h3>
                     <ul>
                         <li><i class="icofont-google-map"></i> <a
-                                href="https://www.google.com/maps/dir//-1.2549991,36.7976519/@-1.254999,36.797652,13z?hl=en" target="_blank">1st
+                                href="https://www.google.com/maps/dir//-1.2549991,36.7976519/@-1.254999,36.797652,13z?hl=en"
+                                target="_blank">1st
                                 Floor, The Pavilion, Lower Kabete Rd, Nairobi</a></li>
                         <li><i class="icofont-envelope"></i> <a href="mailto:info@afyarekod.com">info@afyarekod.com</a>
                         </li>
@@ -42,63 +43,68 @@
 
             <div class="col-md-12 col-lg-7">
                 <h3 class="title">Leave us a Message.</h3>
-                <!-- <p>Team of Professionals</p> -->
-                <form id="contactForm">
+                <form id="contactForm" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
                     <div class="row">
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" name="name" id="name" required
-                                    data-error="Please enter your name" placeholder="Name">
-                                <div class="help-block with-errors"></div>
+                                <input type="text" class="form-control" name="name" #name="ngModel" id="name" required
+                                    placeholder="Name" ngModel>
+                                <div class="help-block errors" *ngIf="!name.valid && name.touched">* Please enter your
+                                    name</div>
                             </div>
                         </div>
 
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
-                                <input type="email" class="form-control" name="email" id="email" required
-                                    data-error="Please enter your email" placeholder="Email">
-                                <div class="help-block with-errors"></div>
+                                <input type="email" class="form-control" name="email" #email="ngModel" id="email"
+                                    required placeholder="Email" ngModel>
+                                <div class="help-block errors" *ngIf="!email.valid && email.touched">* Please enter your
+                                    email</div>
                             </div>
                         </div>
 
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" name="subject" id="subject" required
-                                    data-error="Please enter your subject" placeholder="Subject">
-                                <div class="help-block with-errors"></div>
+                                <input type="text" class="form-control" name="subject" id="subject" #subject="ngModel"
+                                    required placeholder="Subject" ngModel>
+                                <div class="help-block errors" *ngIf="!subject.valid && subject.touched">* Please enter
+                                    your subject</div>
                             </div>
                         </div>
 
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" name="number" id="number" required
-                                    data-error="Please enter your number" placeholder="Phone Number">
-                                <div class="help-block with-errors"></div>
+                                <input type="text" class="form-control" name="number" id="number" #number="ngModel"
+                                    required placeholder="Phone Number" ngModel>
+                                <div class="help-block errors" *ngIf="!number.valid && number.touched">* Please enter
+                                    your phone number</div>
                             </div>
                         </div>
 
                         <div class="col-lg-12 col-md-12">
                             <div class="form-group">
-                                <select class="form-control" name="reason" id="reason">
-                                    <option value="" selected>Reason</option>
-                                    <option value="Free Trial"> Free Trial Application</option>
+                                <select class="form-control" name="reason" id="reason" #reason="ngModel" ngModel>
+                                    <option value="" selected disabled>Select a Reason</option>
                                     <option value="Free Trial"> General Request</option>
+                                    <option value="Free Trial"> Free Trial Request</option>
+                                    <option value="Free Trial"> Service Report</option>
                                     <option value="Free Trial"> Other</option>
                                 </select>
-                                <div class="help-block with-errors"></div>
+                                <div class="help-block errors" *ngIf="!reason.valid && reason.touched">* Please choose a reason to contact us.</div>
                             </div>
                         </div>
 
                         <div class="col-lg-12 col-md-12">
                             <div class="form-group">
-                                <textarea name="message" class="form-control" id="message" cols="30" rows="4" required
-                                    data-error="Write your message" placeholder="Message"></textarea>
-                                <div class="help-block with-errors"></div>
+                                <textarea name="message" class="form-control" id="message" #message="ngModel" rows="4" required
+                                    data-error="Write your message" placeholder="Message" ngModel></textarea>
+                                    <div class="help-block errors" *ngIf="!message.valid && message.touched">* Please choose a reason to contact us.</div>
                             </div>
                         </div>
 
                         <div class="col-lg-12 col-md-12">
-                            <button type="submit" class="default-btn ml-auto float-right"><i class="icofont-rounded-double-right"></i>&nbsp;Send Message</button>
+                            <button [disabled]="!contactForm.valid" type="submit" class="default-btn ml-auto float-right"><i
+                                    class="icofont-rounded-double-right"></i>&nbsp;Send Message</button>
                             <div id="msgSubmit" class="h3 text-center hidden"></div>
                             <div class="clearfix"></div>
                         </div>
