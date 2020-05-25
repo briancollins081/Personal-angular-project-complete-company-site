@@ -42,8 +42,7 @@ export class BlogSingleComponent implements OnInit, OnDestroy {
           throw new Error("No post found!")
         }
         this.post.createdAt = new Date(this.post.createdAt).getDate() + ' <br/> ' + this.getMothName(new Date(this.post.createdAt).getMonth());
-        console.log('post', this.post);
-
+        // console.log('post', this.post);
       }, error => {
         console.log(error);
         alert(error.data.message || 'Error fetching post');

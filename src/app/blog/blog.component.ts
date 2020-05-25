@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BlogService } from './blog.service';
 import { NormalPost } from './post';
 import { compareFromLatest, API_URL } from '../constants';
-import { Router } from '@angular/router';
+// import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-blog',
@@ -23,14 +23,14 @@ export class BlogComponent implements OnInit {
 
   constructor(
     private blogService: BlogService,
-    private router: Router
+    // private router: Router
   ) { }
 
   ngOnInit(): void {
     this.blogService.fetchAllPosts()
       .subscribe(
         res => {
-          console.log(res);
+          // console.log(res);
           this.posts = res.data.posts;
           this.totalPosts = res.data.totalPosts;
           let i;
@@ -50,12 +50,11 @@ export class BlogComponent implements OnInit {
           // this.latestPosts = this.posts.slice(0, 4).sort(this.compare);
           // console.log('latest posts', this.latestPosts);
           this.isLoading = false;
-          console.log('posts', this.posts);
+          // console.log('posts', this.posts);
 
         },
         error => {
           console.log(error);
-
         });
   }
 
