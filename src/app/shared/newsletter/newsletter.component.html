@@ -1,15 +1,20 @@
-<section class="newsletter-section ptb-100"> 
-    <div class="container gray-bg"> 
+<section class="newsletter-section ptb-100">
+    <div class="container gray-bg">
         <div class="section-title white-title">
             <h2>Join Our Newsletter</h2>
             <p>Get updated with our latest promotions, news and new content. We'll keep you up to date.</p>
         </div>
 
         <div class="subscribe-from">
-            <form class="newsletter-form" data-toggle="validator">
-                <input type="email" class="form-control" placeholder="Enter email" name="EMAIL" required autocomplete="off">
+            <form class="newsletter-form" [formGroup]="subscriptionForm" (ngSubmit)="onSubscription()">
+                <input type="email" class="form-control" placeholder="Enter email" name="email" required
+                    autocomplete="off" formControlName="email">
+                <div class="text-white" style="font-size: small; font-weight: bold;"
+                    *ngIf="subscriptionForm.get('email').touched && !subscriptionForm.get('email').valid">* email field is
+                    required!</div>
                 <button type="submit" class="btn submit-btn"><i class="icofont-location-arrow"></i></button>
-                <div id="validator-newsletter" class="form-result"></div>
+                <div style="font-size: small; font-weight: bold;" id="validator-newsletter" class="form-result text-white my-2 text-right" *ngIf="isSent">Thank you for subscribing to our email list.</div>
+                <div style="font-size: small; font-weight: bold;" id="validator-newsletter" class="form-result text-white my-2" *ngIf="isSending">Procesing please wait ...</div>
             </form>
         </div>
     </div>

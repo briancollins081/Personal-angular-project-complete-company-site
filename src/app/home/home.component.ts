@@ -2,6 +2,9 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { BlogService } from '../blog/blog.service';
 import { NormalPost } from '../blog/post';
 import { API_URL, compareFromOldest } from "../constants";
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Subscription } from 'rxjs';
+import { HomeService } from './home.service';
 
 declare const $: any;
 
@@ -14,12 +17,29 @@ export class HomeComponent implements OnInit, AfterViewInit {
   posts: NormalPost[] = [];
   isLoading: boolean = true;
   API_URL = API_URL;
+  homeContactForm:FormGroup;
   // post = null;
-  constructor(private blogService: BlogService) { }
+  successMessage: string = "";
+  isSent = false;
+  formIsLoading = false;
+  mailSentSubscritpiton: Subscription;
+  constructor(
+    private blogService: BlogService,
+    private homeService: HomeService) { }
 
   ngOnInit(): void {
     this.initJS();
-
+    this.initContactForm();
+    this.mailSentSubscritpiton = this.homeService.mailSentEmitter
+      .subscribe(status => {
+        this.isSent = status;
+        this.formIsLoading = false;
+        if (status) {
+          this.successMessage = "Message sent successfully"
+        } else {
+          this.successMessage = "Message not sent at this time, please try again later or email us using <b>info@afyarekod.com<b>"
+        }
+      })
   }
 
   ngAfterViewInit(): void {
@@ -32,6 +52,20 @@ export class HomeComponent implements OnInit, AfterViewInit {
       }, error => {
         console.log("Error retriving posts")
       });
+  }
+
+  initContactForm(){
+    this.homeContactForm = new FormGroup({
+      name: new FormControl("", Validators.required),
+      email: new FormControl("", [Validators.required, Validators.email]),
+      number: new FormControl("", Validators.required),
+      message: new FormControl("", Validators.required),
+    });
+  }
+  onContactUs(){
+    this.formIsLoading = true;
+    console.log(this.homeContactForm.value);
+    this.homeService.sendMail(this.homeContactForm.value)
   }
 
   delay(ms: number) {

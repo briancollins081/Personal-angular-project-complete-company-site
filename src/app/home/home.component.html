@@ -591,34 +591,60 @@
             <div class="col-md-12 col-lg-7 p-0">
                 <div class="appointment-form">
                     <h2 class="title">Leave us a Message</h2>
-                    <form>
+                    <form [formGroup]="homeContactForm" (ngSubmit)="onContactUs()">
                         <div class="row my-2">
                             <div class="col-md-6 col-lg-6 pr-10 my-2">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="id_name" placeholder="Name">
+                                    <input type="text" class="form-control" id="id_name" placeholder="Name"
+                                        formControlName="name">
+                                    <div *ngIf="homeContactForm.get('name').touched && !homeContactForm.get('name').valid"
+                                        class="text-white" style="font-size: small; font-weight: bold;">* Your name is
+                                        required</div>
                                 </div>
                             </div>
 
                             <div class="col-md-6 col-lg-6 pl-10 my-2">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" id="id_email" placeholder="Email">
+                                    <input type="email" class="form-control" id="id_email" placeholder="Email"
+                                        formControlName="email">
+                                    <div *ngIf="homeContactForm.get('email').touched && !homeContactForm.get('email').valid"
+                                        class="text-white" style="font-size: small; font-weight: bold;">* Your email
+                                        address is required</div>
                                 </div>
                             </div>
 
                             <div class="col-md-6 col-lg-6 pr-10 my-2">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="id_phone_number"
-                                        placeholder="Phone Number">
+                                    <input type="number" class="form-control" id="id_phone_number"
+                                        placeholder="Phone Number" formControlName="number">
+                                    <div *ngIf="homeContactForm.get('number').touched && !homeContactForm.get('number').valid"
+                                        class="text-white" style="font-size: small; font-weight: bold;">* Your phone
+                                        number required</div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="form-group my-2">
-                            <textarea class="form-control" id="message" rows="6" placeholder="Message"></textarea>
+                            <textarea class="form-control" id="message" rows="6" placeholder="Message"
+                                formControlName="message"></textarea>
+
+                            <div *ngIf="homeContactForm.get('message').touched && !homeContactForm.get('message').valid"
+                                class="text-white" style="font-size: small; font-weight: bold;">* Message can not be
+                                empty.</div>
                         </div>
 
-                        <button type="submit" class="btn book-now-btn mt-4 float-right ml-auto"><i
-                                class="icofont-rounded-double-right"></i>&nbsp;&nbsp;Send Now</button>
+                        <div class="col-xl-12">
+                            <div style="font-size: small;" class="help-block"
+                                [ngClass]="{'text-danger mt-2': !isSent, 'text-info' : isSent}"
+                                [innerHTML]="successMessage">
+                            </div>
+                            <div  style="font-size: small; font-weight: bold;" class="help-block text-info" *ngIf="formIsLoading">
+                                Sending message please wait ...
+                            </div>
+                        </div>
+                        <button [disabled]="!homeContactForm.valid" type="submit"
+                            class="btn book-now-btn mt-4 float-right ml-auto"><i
+                                class="icofont-rounded-double-right"></i>&nbsp;&nbsp;Send</button>
                     </form>
                 </div>
             </div>
@@ -707,7 +733,7 @@
 
                                 <ul class="meta-tag">
                                     <li class="author">
-                                        <img src="assets/img/patient/1.jpg" alt="">
+                                        <img src="assets/img/user.png" alt="">
                                         <a href="javascript:void">{{posts[0].author_fname}}</a>
                                     </li>
                                     <li>{{posts[0].createdAt}}</li>
@@ -734,7 +760,7 @@
 
                                 <ul class="meta-tag">
                                     <li class="author">
-                                        <img src="assets/img/patient/1.jpg" alt="">
+                                        <img src="assets/img/user.png" alt="">
                                         <a href="javascript:void">{{posts[1].author_fname}}</a>
                                     </li>
                                     <li>{{posts[1].createdAt}}</li>
@@ -761,7 +787,7 @@
 
                                 <ul class="meta-tag">
                                     <li class="author">
-                                        <img src="assets/img/patient/1.jpg" alt="">
+                                        <img src="assets/img/user.png" alt="">
                                         <a href="javascript:void">{{posts[2].author_fname}}</a>
                                     </li>
                                     <li>{{posts[2].createdAt}}</li>

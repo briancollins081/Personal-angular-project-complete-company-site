@@ -85,28 +85,41 @@
                             <div class="form-group">
                                 <select class="form-control" name="reason" id="reason" #reason="ngModel" ngModel>
                                     <option value="" selected disabled>Select a Reason</option>
-                                    <option value="Free Trial"> General Request</option>
-                                    <option value="Free Trial"> Free Trial Request</option>
-                                    <option value="Free Trial"> Service Report</option>
-                                    <option value="Free Trial"> Other</option>
+                                    <option value="General Request"> General Request</option>
+                                    <option value="Free Trial Request"> Free Trial Request</option>
+                                    <option value="Service Trial"> Service Report</option>
+                                    <option value="Inquiry"> Inquiry</option>
+                                    <option value="Other"> Other</option>
                                 </select>
-                                <div class="help-block errors" *ngIf="!reason.valid && reason.touched">* Please choose a reason to contact us.</div>
+                                <div class="help-block errors" *ngIf="!reason.valid && reason.touched">* Please choose a
+                                    reason to contact us.</div>
                             </div>
                         </div>
 
                         <div class="col-lg-12 col-md-12">
                             <div class="form-group">
-                                <textarea name="message" class="form-control" id="message" #message="ngModel" rows="4" required
-                                    data-error="Write your message" placeholder="Message" ngModel></textarea>
-                                    <div class="help-block errors" *ngIf="!message.valid && message.touched">* Please choose a reason to contact us.</div>
+                                <textarea name="message" class="form-control" id="message" #message="ngModel" rows="4"
+                                    required data-error="Write your message" placeholder="Message" ngModel></textarea>
+                                <div class="help-block errors" *ngIf="!message.valid && message.touched">* Please choose
+                                    a reason to contact us.</div>
                             </div>
                         </div>
 
                         <div class="col-lg-12 col-md-12">
-                            <button [disabled]="!contactForm.valid" type="submit" class="default-btn ml-auto float-right"><i
+                            <button [disabled]="!contactForm.valid" type="submit"
+                                class="default-btn ml-auto float-right"><i
                                     class="icofont-rounded-double-right"></i>&nbsp;Send Message</button>
                             <div id="msgSubmit" class="h3 text-center hidden"></div>
                             <div class="clearfix"></div>
+                        </div>
+                        <div class="col-xl-12">
+                            <div style="font-size: small;" class="help-block"
+                                [ngClass]="{'text-danger mt-2': !isSent, 'text-info' : isSent}"
+                                [innerHTML]="successMessage">
+                            </div>
+                            <div  style="font-size: small; font-weight: bold;" class="help-block text-info" *ngIf="isLoading">
+                                Sending message please wait ...
+                            </div>
                         </div>
                     </div>
                 </form>
