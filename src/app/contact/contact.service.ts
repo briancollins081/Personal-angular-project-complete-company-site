@@ -17,7 +17,7 @@ export class ContactService {
     reason: string,
     message: string
   }) {
-    this._http.post<any>(`${API_URL}`, data, {
+    this._http.post<any>(`${API_URL}/mail/contact`, data, {
       headers: {
         'Content-Type': 'application/json'
       },

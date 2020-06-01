@@ -11,7 +11,7 @@ export class HomeService {
   constructor(private _http:HttpClient) { }
 
   sendMail(data) {
-    this._http.post<any>(`${API_URL}`, data, {
+    this._http.post<any>(`${API_URL}/mail/contact`, data, {
       headers: {
         'Content-Type': 'application/json'
       },

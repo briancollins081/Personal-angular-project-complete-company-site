@@ -45,14 +45,14 @@ export class BlogComponent implements OnInit, OnDestroy {
             this.isLoading = false;
           } else {
             this.posts = res.data.post;
-            this.totalPosts = res.data.post.length;
+            this.totalPosts = this.posts.length;
             let i;
             for (i = 1; i <= this.totalPosts; i++) {
               if (i % 4 === 0) {
                 this.pages.push(i);
               }
             }
-            if (this.totalPosts % 4 !== 0) {
+            if (this.totalPosts > 4 && this.totalPosts % 4 !== 0) {
               this.pages.push(i + 1);
             }
             console.log("posts", this.posts);
