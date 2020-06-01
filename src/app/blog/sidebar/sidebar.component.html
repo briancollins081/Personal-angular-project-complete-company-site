@@ -1,8 +1,9 @@
 <div class="side-bar" id="sidebar">
     <div class="widget search-box">
-        <form>
-            <input type="text" class="form-control" id="search-box" name="search" placeholder="Search for...">
-            <button type="submit" class="default-btn"><i class="icofont-ui-search"></i></button>
+        <form [formGroup]="blogSearch" (ngSubmit)="onSearch()">
+            <input formControlName="keyword" type="text" class="form-control" id="search-box" name="search" placeholder="Search for...">
+            <!-- <div class="error" *ngIf="blogSearch.get('keyword').touched && !blogSearch.get('keyword').valid">please enter a word to search!</div> -->
+            <button type="submit" class="default-btn" [disabled]="!blogSearch.valid"><i class="icofont-ui-search"></i></button>
         </form>
     </div>
 

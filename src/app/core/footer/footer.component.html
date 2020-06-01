@@ -8,9 +8,12 @@
                     </a>
                     <!-- <hr> -->
                     <ul class="socials-links">
-                        <li><a href="https://www.facebook.com/Afya_Rekod-101708374728535/" target="_blank"><i class="icofont-facebook"></i></a></li>
-                        <li><a href="https://twitter.com/AfyaRekod" target="_blank"><i class="icofont-twitter"></i></a></li>
-                        <li><a href="https://www.linkedin.com/company/afya-rekod-limited" target="_blank"><i class="icofont-linkedin"></i></a></li>
+                        <li><a href="https://www.facebook.com/Afya_Rekod-101708374728535/" target="_blank"><i
+                                    class="icofont-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/AfyaRekod" target="_blank"><i class="icofont-twitter"></i></a>
+                        </li>
+                        <li><a href="https://www.linkedin.com/company/afya-rekod-limited" target="_blank"><i
+                                    class="icofont-linkedin"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -53,7 +56,9 @@
 
                     <div class="foot-contact-info">
                         <i class="icofont-email"></i>
-                        <p><br/>info@afyarekod.com <!-- <br> suport@afyarekod.com --></p>
+                        <p><br />info@afyarekod.com
+                            <!-- <br> suport@afyarekod.com -->
+                        </p>
                     </div>
                 </div>
             </div>
@@ -67,8 +72,15 @@
             </div>
             <div class="col-md-6 col-lg-6">
                 <ul>
-                    <li><a href="index.html#">Privac Policy</a></li>
-                    <li><a href="index.html#">Terms & Conditions</a></li>
+
+                    <li>
+                       <a [routerLink]="'/documents/health'" [queryParams]="{doc:'terms.pdf'}">Terms & Conditions</a>
+                    </li>
+
+                    <li>
+                        <a [routerLink]="'/documents/health'" [queryParams]="{doc:'privacy.pdf'}">Privacy Statement</a>
+                    </li>
+
                 </ul>
             </div>
         </div>

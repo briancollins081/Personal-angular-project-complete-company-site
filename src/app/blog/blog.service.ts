@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { API_URL } from '../constants';
 
@@ -8,6 +8,8 @@ import { API_URL } from '../constants';
 })
 export class BlogService {
   private pageCount:number = 4;
+  searchPostTriggered:EventEmitter<string> = new EventEmitter<string>();
+
   constructor(private _http: HttpClient) { }
 
   fetchAllPosts() {
@@ -31,5 +33,8 @@ export class BlogService {
         Authorization: `Bearer ${localStorage.getItem('token')}`
       }
     })
+  }
+  searchPosts(keyword:string){
+    return this._http.get<any>(`${API_URL}/content/posts/search?keyword=${keyword}`)
   }
 }

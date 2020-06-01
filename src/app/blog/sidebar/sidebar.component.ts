@@ -1,7 +1,10 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
 import { NormalPost } from '../post';
 import { BlogService } from '../blog.service';
-import { compareFromOldest, API_URL } from 'src/app/constants';
+import { API_URL, compareFromLatest } from 'src/app/constants';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
 
 declare const $: any;
 
@@ -10,23 +13,33 @@ declare const $: any;
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css']
 })
-export class SidebarComponent implements OnInit, AfterViewInit {
+export class SidebarComponent implements OnInit, OnDestroy {
   isLoading: boolean = true;
   latestPosts: NormalPost[] = [];
   API_URL = API_URL;
+  blogSearch:FormGroup;
 
-  constructor(private blogService: BlogService) { }
+  searchSubscription:Subscription;
+
+  constructor(
+    private blogService: BlogService,
+    private router: Router
+    ) { }
 
   ngOnInit(): void {
+    this.blogSearch = new FormGroup({
+      keyword: new FormControl("", Validators.required)
+    });
+
     this.blogService.fetchAllPosts()
       .subscribe(
         res => {
           this.latestPosts = res.data.posts;
           this.latestPosts.map(p => {
-            p.updatedAt = new Date(p.updatedAt).toLocaleDateString();
+            p.updatedAt = new Date(p.updatedAt).toDateString();
             p.introduction = p.post_content.substr(0, p.post_content.indexOf('</p>') > 0 ? p.post_content.indexOf('</p>') : 200)
           });
-          this.latestPosts = this.latestPosts.sort(compareFromOldest).slice(0, 5);
+          this.latestPosts = this.latestPosts.sort(compareFromLatest).slice(0, 5);
           this.isLoading = false;
 
         },
@@ -36,8 +49,10 @@ export class SidebarComponent implements OnInit, AfterViewInit {
         });
   }
 
-  ngAfterViewInit() {
-    // this.applySettings();
+  ngOnDestroy() {
+    if(this.searchSubscription){
+      this.searchSubscription.unsubscribe();
+    }
   }
 
   compare(a: NormalPost, b: NormalPost) {
@@ -52,6 +67,14 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     }
     return 0;
   }
+
+  onSearch(){
+    // console.log(this.blogSearch.get('keyword').value);
+    this.blogService.searchPostTriggered.emit(this.blogSearch.get('keyword').value);
+    this.router.navigate(['/blog']);
+  }
+
+
   // applySettings() {
   //   $(document).ready(() => {
   //     var elementPosition = $('#sidebar').offset();

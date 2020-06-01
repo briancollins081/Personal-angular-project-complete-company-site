@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NgxExtendedPdfViewerModule } from "ngx-extended-pdf-viewer";
 import { DocumentsComponent } from './documents.component';
 import { Routes, RouterModule } from '@angular/router';
-import { GovCovidComponent } from './gov-covid/gov-covid.component';
+import { Display } from './display/display.component';
 import { SharedModule } from '../shared/shared.module';
 
 const routes: Routes = [
@@ -13,14 +13,14 @@ const routes: Routes = [
   },
   {
     path: 'health',
-    component: GovCovidComponent
+    component: Display
   }
 ]
 
 @NgModule({
   declarations: [
     DocumentsComponent,
-    GovCovidComponent
+    Display
   ],
   imports: [
     CommonModule,

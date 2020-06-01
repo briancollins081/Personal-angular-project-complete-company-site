@@ -23,13 +23,13 @@
             <div class="col-lg-8 col-md-12">
                 <div class="blog-details">
                     <div class="article-img">
-                        <img src="{{API_URL}}/{{post.post_image_url}}" alt="blog-details">
+                        <img src="{{API_URL}}/{{post.post_image_url}}" alt="blog-details" style="min-height: 350px !important; max-height: 350px !important; height: 350px !important;">
                         <div class="date" [innerHTML]="post.createdAt"></div>
                     </div>
 
                     <div class="article-content">
                         <ul class="category">
-                            <li><a href="javascript:void">General Health</a></li>
+                            <li><a href="javascript:void">General News</a></li>
                             <!-- <li><a href="javascript:void">Mobile</a></li>
                             <li><a href="javascript:void">Marketing</a></li>
                             <li><a href="javascript:void">Design</a></li>

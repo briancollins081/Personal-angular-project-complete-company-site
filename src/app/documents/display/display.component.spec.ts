@@ -1,14 +1,14 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GovCovidComponent } from './gov-covid.component';
+import { Display } from './display.component';
 
-describe('GovCovidComponent', () => {
-  let component: GovCovidComponent;
-  let fixture: ComponentFixture<GovCovidComponent>;
+describe('Display', () => {
+  let component: Display;
+  let fixture: ComponentFixture<Display>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GovCovidComponent ]
+      declarations: [ Display ]
     })
     .compileComponents();
   }));
