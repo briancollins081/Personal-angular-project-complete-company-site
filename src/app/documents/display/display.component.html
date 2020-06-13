@@ -1,14 +1,14 @@
-<div class="page-title page-title-blog">
+<div class="page-title page-title-documents">
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-lg-7">
-                <h2>Document View</h2>
+                <h2 class="text-secondary">Document View</h2>
             </div>
 
             <div class="col-md-6 col-lg-5">
-                <ul>
-                    <li><a [routerLink]="'/home'">Home</a></li>
-                    <li><a [routerLink]="'/documents'">Documents</a></li>
+                <ul class="text-dark">
+                    <li><a [routerLink]="'/home'" class="text-secondary">Home</a></li>
+                    <li><a [routerLink]="'/documents'" class="text-secondary">Documents</a></li>
                     <li>View</li>
                 </ul>
             </div>
@@ -23,14 +23,9 @@
                 <div class="contact-info">
                     <h2>{{docTitle}}</h2>
                     <hr>
-                    <ngx-extended-pdf-viewer 
-                    [src]="docURL" 
-                    useBrowserLocale="true" 
-                    height="1000px"
-                    [showDownloadButton]="true"
-                    [showBookmarkButton]="false"
-                    [showOpenFileButton]="false"
-                    [showPrintButton]="false">
+                    <ngx-extended-pdf-viewer [src]="docURL" useBrowserLocale="true" height="1000px"
+                        [showDownloadButton]="true" [showBookmarkButton]="false" [showOpenFileButton]="false"
+                        [showPrintButton]="false">
                     </ngx-extended-pdf-viewer>
                 </div>
             </div>

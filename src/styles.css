@@ -1650,6 +1650,9 @@ img {
 .page-title-demo {
   background-image: url("assets/img/top/app-demo-top.jpg");
 }
+.page-title-documents{
+  background-image: url("assets/img/top/document-top.jpg");
+}
 .page-title::before {
   content: '';
   position: absolute;

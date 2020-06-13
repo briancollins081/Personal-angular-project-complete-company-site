@@ -1,14 +1,14 @@
-<div class="page-title page-title-blog">
+<div class="page-title page-title-documents">
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-lg-7">
-                <h2>Privacy Policies</h2>
+                <h2 class="text-secondary">Privacy Policies</h2>
             </div>
 
             <div class="col-md-6 col-lg-5">
                 <ul>
-                    <li><a [routerLink]="'/home'">Home</a></li>
-                    <li>Policies</li>
+                    <li><a class="text-dark" [routerLink]="'/home'">Home</a></li>
+                    <li class="text-dark">Policies</li>
                 </ul>
             </div>
         </div>
@@ -23,20 +23,42 @@
                     <h2>Read About our Policies</h2>
                     <hr>
                     <ul>
-                        <div class="row">
-                            <div class="col-xl-12">
+                        <div class="row mt-4">
+                            <!-- <div class="col-xl-12">
                                 <h5 class="my-2">Read More</h5>
-                            </div>
+                            </div> -->
                             <div class="col-xl-6">
                                 <li>
-                                    <i class="icofont-attachment"></i> 
-                                    <a [routerLink]="'/documents/health'" [queryParams]="{doc:'terms', title: 'Terms and Conditions'}">Afya Rekods Terms and Conditions</a>
+                                    <a [routerLink]="'/documents/health'"
+                                        [queryParams]="{doc:'terms', title: 'Terms and Conditions'}">
+                                        <div class="card">
+                                            <img class="card-img-top" src="assets/documents/terms.jpg"
+                                                alt="Terms & Condition">
+                                            <div class="card-body">
+                                                <h5 class="card-title"><i class="icofont-attachment"></i> Afya Rekods
+                                                    Terms and Conditions</h5>
+                                                <!-- <p class="card-text">Content</p> -->
+                                            </div>
+                                        </div>
+
+                                    </a>
                                 </li>
                             </div>
                             <div class="col-xl-6">
                                 <li>
-                                    <i class="icofont-attachment"></i> 
-                                    <a [routerLink]="'/documents/health'" [queryParams]="{doc:'privacy', title: 'Privacy Policy'}">Afya Rekod's Privacy Statement</a>
+                                    <a [routerLink]="'/documents/health'"
+                                        [queryParams]="{doc:'privacy', title: 'Privacy Policy'}">
+                                        <div class="card">
+                                            <img class="card-img-top" src="assets/documents/privacy.jpg"
+                                                alt="Terms & Condition">
+                                            <div class="card-body">
+                                                <h5 class="card-title"><i class="icofont-attachment"></i> Afya Rekod's Privacy
+                                                    Statement</h5>
+                                                <!-- <p class="card-text">Content</p> -->
+                                            </div>
+                                        </div>
+
+                                    </a>
                                 </li>
                             </div>
                             <!-- <div class="col-xl-6">
