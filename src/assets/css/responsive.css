@@ -1,5 +1,5 @@
 @media only screen and (max-width: 767px) {
-  p {
+  p, ul li {
     font-size: 14px;
   }
   .ptb-100 {
@@ -39,12 +39,12 @@
     display: none;
   }
   .navbar-light .navbar-toggler {
-    color: #396cf0;
-    border-color: #396cf0;
+    color: #db0000;
+    border-color: rgb(219, 0, 0);
     border-radius: 2px;
   }
   .navbar-light .navbar-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(57, 108, 240, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgb(219, 0, 0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   }
   .navbar-light .navbar-collapse {
     height: 291px;

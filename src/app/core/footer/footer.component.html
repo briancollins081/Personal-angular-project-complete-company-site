@@ -1,7 +1,7 @@
 <footer class="pt-100 pb-50">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-4">
+            <div class="col-12 col-md-12 col-lg-4 p-sm-2">
                 <div class="footer-widget">
                     <a [routerLink]="'/home'" class="footer-logo">
                         <img src="assets/img/mainlogo.png" alt="AfyaRekod Logo">
@@ -17,22 +17,22 @@
                     </ul>
                 </div>
             </div>
+            <div class="col-lg-1"></div>
 
-            <div class="col-sm-6 col-md-4 col-lg-2">
+            <div class="col-6 col-md-4 col-lg-3">
                 <div class="footer-widget">
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a [routerLink]="'/home'">Home</a></li>
                         <li><a [routerLink]="'/about'">About</a></li>
                         <li><a [routerLink]="'/services'">Services</a></li>
-                        <!-- <li><a [routerLink]="'/home'">Gallery</a></li> -->
                         <li><a [routerLink]="'/blog'">Blog</a></li>
                         <li><a [routerLink]="'/contact'">Contact</a></li>
                     </ul>
                 </div>
             </div>
 
-            <div class="col-sm-6 col-md-4 col-lg-3">
+            <!-- <div class="col-6 col-md-4 col-lg-3">
                 <div class="footer-widget">
                     <h3>Relations</h3>
                     <ul>
@@ -43,17 +43,17 @@
                         <li><a href="#" target="_blank">Ecoba</a></li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="col-sm-12 col-md-4 col-lg-3">
+            <div class="col-6 col-md-4 col-lg-3">
                 <div class="footer-widget">
                     <h3>Contact Us</h3>
                     <p>Reach us through.</p>
 
-                    <div class="foot-contact-info my-2">
+                    <!-- <div class="foot-contact-info my-2">
                         <i class="icofont-phone"></i>
                         <p class="py-3">+254 726 256700</p>
-                    </div>
+                    </div> -->
 
                     <div class="foot-contact-info my-2">
                         <i class="icofont-email"></i>
@@ -75,11 +75,11 @@
                 <ul>
 
                     <li>
-                       <a [routerLink]="'/documents/health'" [queryParams]="{doc:'terms.pdf'}">Terms & Conditions</a>
+                       <a [routerLink]="'/privacy/terms'">Terms & Conditions</a>
                     </li>
 
                     <li>
-                        <a [routerLink]="'/documents/health'" [queryParams]="{doc:'privacy.pdf'}">Privacy Statement</a>
+                        <a [routerLink]="'/privacy/policy'">Privacy Statement</a>
                     </li>
 
                 </ul>

@@ -12,7 +12,7 @@
         <div class="d-table">
             <div class="d-tablecell">
                 <div class="hero-text text-center">
-                    <h1>Secure data storage for patients, doctors, health workers & hospitals</h1>
+                    <h1>Secured data storage for patients, doctors, health workers & hospitals</h1>
                 </div>
             </div>
         </div>
@@ -129,8 +129,8 @@
     <div class="container">
         <div class="section-title white-title">
             <h2>Watch Our Video</h2>
-            <p>What is AfyaRekod? Why AfyaRekod at all? This introduction will explain to you in summary what AfyaRekod
-                is all about. Who we are and what we do as an AI driven platform.</p>
+            <p class="d-none d-xl-block">What is AfyaRekod? This introduction will demonstrate to you
+                in summary what AfyaRekod is all about.</p>
         </div>
 
         <div class="video-content mb-minus-330">
@@ -139,7 +139,7 @@
                     <div class="sonar-wrapper">
                         <div class="sonar-emitter">
                             <div class="sonar-wave"></div>
-                            <a href="https://www.youtube.com/watch?v=NUX4uwyUGfw" class="play-video popup-youtube">
+                            <a href="https://www.youtube.com/watch?v=90BekNJpWAQ" class="play-video popup-youtube">
                                 <i class="icofont-play"></i>
                             </a>
                         </div>
@@ -150,7 +150,7 @@
     </div>
 </section>
 
-<div class="ptb-100">&nbsp;</div>
+<div class="ptb-100 d-none d-xl-block">&nbsp;</div>
 
 <section class="department-section pt-100 pb-50 white-bg">
     <div class="container">
@@ -228,8 +228,10 @@
                         prescriptions you take.</p>
                 </div>
             </div>
-            <a [routerLink]="'/services'" class="default-btn float-right ml-auto"><i
-                    class="icofont-rounded-double-right" style="font-size: larger;"></i>&nbsp;&nbsp;Read More</a>
+            <div class="col-xl-12">
+                <a [routerLink]="'/services'" class="default-btn float-right ml-auto"><i
+                        class="icofont-rounded-double-right" style="font-size: larger;"></i>&nbsp;&nbsp;Read More</a>
+            </div>
         </div>
     </div>
 </section>
@@ -268,9 +270,12 @@
 
                 <div class="caption-text text-center">
                     <h3>John Kamara</h3>
-                    <span class="designation mb-10">Founder & CEO</span>
-                    <p>John is a tech entrepreneur(AI, Blockchain, IOT) and also a keynote speaker. He is the founder of
-                        Jamborow, Afyarekod and Adalabs</p>
+                    <!-- <span class="designation mb-10">Founder & CEO</span> -->
+                    <!-- <p>John is a tech entrepreneur(AI, Blockchain, IOT) and also a keynote speaker. He is the founder of
+                        Jamborow, Afyarekod and Adalabs</p> -->
+                        <p>
+                            Founder & CEO
+                        </p>
                 </div>
             </div>
 
@@ -294,13 +299,75 @@
 
                 <div class="caption-text text-center">
                     <h3>Irene Kiwia</h3>
-                    <span class="designation mb-10">Co-Founder</span>
-                    <p>
+                    <!-- <span class="designation mb-10">Co-Founder</span> -->
+                    <!-- <p>
                         Irene Kiwia is a tech entrepreneur and women and youth empowerment proponent.
+                    </p> -->
+                    <p>
+                        Co-Founder
                     </p>
                 </div>
             </div>
+            <div class="single-card">
+                <div class="thumb-img">
+                    <img src="assets/img/team/ron.jpg" alt="Ronald Harris" />
+                    <div class="hover-social">
+                        <div class="d-table">
+                            <div class="d-tablecell">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.linkedin.com/in/ronald-m-harris-md-mba-faad-32969b18/"
+                                            target="_blank">
+                                            <i class="icofont-linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="caption-text text-center">
+                    <h3>Dr. Ronald Harris</h3>
+                    <!-- <span class="designation mb-10">Co-Founder & Advisor</span> -->
+                    <!-- <p>
+                        Ronal is a clinical professor of dermatology, UC Irvine
+                    </p> -->
+                    <p>
+                        Co-Founder & Advisor
+                    </p>
+                </div>
+            </div>
+            <div class="single-card">
+                <div class="thumb-img">
+                    <img src="assets/img/team/nancy.png" alt="Nancy Christiano" />
+                    <div class="hover-social">
+                        <div class="d-table">
+                            <div class="d-tablecell">
+                                <ul>
+                                    <li>
+                                        <a href="https://linkedin.com/in/nancy-dyste-christiano" target="_blank">
+                                            <i class="icofont-linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="caption-text text-center">
+                    <h3>Nancy Christiano</h3>
+                    <!-- <span class="designation mb-10">Co-Founder & Advisor</span> -->
+                    <!-- <p>
+                        Nancy is an entrepreneur with focus in connecting people, products & services to benefit
+                        humanity.
+                    </p> -->
+                    <p>
+                        Co-Founder & Advisor
+                    </p>
+                </div>
+            </div>
             <div class="single-card">
                 <div class="thumb-img">
                     <img src="assets/img/team/bendon.jpg" alt="Bendon Mugor" />
@@ -321,9 +388,12 @@
 
                 <div class="caption-text text-center">
                     <h3>Bendon Mugor</h3>
-                    <span class="designation mb-10">CTO (Chief Technology Officer)</span>
-                    <p>
+                    <!-- <span class="designation mb-10">CTO (Chief Technology Officer)</span> -->
+                    <!-- <p>
                         Bendon is the CEO at Paylend Ltd.
+                    </p> -->
+                    <p>
+                        CTO (Chief Technology Officer)
                     </p>
                 </div>
             </div>
@@ -348,10 +418,11 @@
 
                 <div class="caption-text text-center">
                     <h3>Umuhany Zuhudi</h3>
-                    <span class="designation mb-10">General Manager</span>
-                    <p>
+                    <!-- <span class="designation mb-10">General Manager</span> -->
+                    <!-- <p>
                         Zuhudi is a Product Manager | Enabling Startups in Africa.
-                    </p>
+                    </p> -->
+                    <p>General Manager</p>
                 </div>
             </div>
 
@@ -375,67 +446,13 @@
 
                 <div class="caption-text text-center">
                     <h3>Dr. Loise Ngugi</h3>
-                    <span class="designation mb-10">Management</span>
-                    <p>
+                    <!-- <span class="designation mb-10">Head of medical services</span> -->
+                    <!-- <p>
                         Head of medical services
-                    </p>
+                    </p> -->
+                    <p>Head of medical services</p>
                 </div>
             </div>
-            <div class="single-card">
-                <div class="thumb-img">
-                    <img src="assets/img/team/nancy.png" alt="Nancy Christiano" />
-                    <div class="hover-social">
-                        <div class="d-table">
-                            <div class="d-tablecell">
-                                <ul>
-                                    <li>
-                                        <a href="https://linkedin.com/in/nancy-dyste-christiano" target="_blank">
-                                            <i class="icofont-linkedin"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="caption-text text-center">
-                    <h3>Nancy Christiano</h3>
-                    <span class="designation mb-10">Advisor</span>
-                    <p>
-                        Nancy is an entrepreneur with focus in connecting people, products & services to benefit
-                        humanity.
-                    </p>
-                </div>
-            </div>
-            <div class="single-card">
-                <div class="thumb-img">
-                    <img src="assets/img/team/ron.jpg" alt="Ronald Harris" />
-                    <div class="hover-social">
-                        <div class="d-table">
-                            <div class="d-tablecell">
-                                <ul>
-                                    <li>
-                                        <a href="https://www.linkedin.com/in/ronald-m-harris-md-mba-faad-32969b18/"
-                                            target="_blank">
-                                            <i class="icofont-linkedin"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="caption-text text-center">
-                    <h3>Dr.Ronald Harries</h3>
-                    <span class="designation mb-10">Advisor</span>
-                    <p>
-                        Ronal is a clinical professor of dermatology, UC Irvine
-                    </p>
-                </div>
-            </div>
-
             <div class="single-card">
                 <div class="thumb-img">
                     <img src="assets/img/team/nixon.jpg" alt="Nixon M. Gecheo" />
@@ -456,10 +473,11 @@
 
                 <div class="caption-text text-center">
                     <h3>Nixon Mageka Gecheo </h3>
-                    <span class="designation mb-10">Advisor</span>
-                    <p>
+                    <!-- <span class="designation mb-10">Advisor</span> -->
+                    <!-- <p>
                         Nixon is the director of government affairs in Kenya.
-                    </p>
+                    </p> -->
+                    <p>Advisor</p>
                 </div>
             </div>
             <div class="single-card">
@@ -483,9 +501,41 @@
 
                 <div class="caption-text text-center">
                     <h3>Dr. Jane Thomas</h3>
-                    <span class="designation mb-10">Advisor</span>
-                    <p>
+                    <!-- <span class="designation mb-10">Advisor</span> -->
+                    <!-- <p>
                         Jane is a former adviser of WHO and the CEO of Fintech World Wide.
+                    </p> -->
+                    <p>Advisor</p>
+                </div>
+            </div>
+
+            <div class="single-card">
+                <div class="thumb-img">
+                    <img src="assets/img/team/alex.jpg" alt="Alex Cahana" />
+                    <div class="hover-social">
+                        <div class="d-table">
+                            <div class="d-tablecell">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.linkedin.com/in/dr-alex-cahana-cryptohealth-sherpa/"
+                                            target="_blank">
+                                            <i class="icofont-linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="caption-text text-center">
+                    <h3>Alex Cahana</h3>
+                    <!-- <span class="designation mb-10">Advisor</span> -->
+                    <!-- <p>
+                        Alex is the Chief Media Officer and EMEA Market Lead at ConsenSys Health
+                    </p> -->
+                    <p>
+                        Advisor
                     </p>
                 </div>
             </div>
@@ -510,10 +560,11 @@
 
                 <div class="caption-text text-center">
                     <h3>Dan Mapes</h3>
-                    <span class="designation mb-10">Advisor</span>
-                    <p>
+                    <!-- <span class="designation mb-10">Advisor</span> -->
+                    <!-- <p>
                         Dan is the founder of Verses.io and The Spatial Web Foundation
-                    </p>
+                    </p> -->
+                    <p>Advisor</p>
                 </div>
             </div>
 
@@ -537,10 +588,11 @@
 
                 <div class="caption-text text-center">
                     <h3>Vince Monilari</h3>
-                    <span class="designation mb-10">Advisor</span>
-                    <p>
+                    <!--<span class="designation mb-10">Advisor</span>
+                     <p>
                         Vince is one of the hosts at Fintech.TV & TheIMPACT
-                    </p>
+                    </p> -->
+                    <p>Advisor</p>
                 </div>
             </div>
 
@@ -564,9 +616,12 @@
 
                 <div class="caption-text text-center">
                     <h3>Gamil de Chadarevian</h3>
-                    <span class="designation mb-10">Advisor</span>
-                    <p>
+                    <!--<span class="designation mb-10">Advisor</span>
+                     <p>
                         Gamil is the Founder & Director of GIST Initiatives Ltd and GIST Holdings Ltd.
+                    </p> -->
+                    <p>
+                        Advisor
                     </p>
                 </div>
             </div>
@@ -574,7 +629,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <a [routerLink]="'/members'" class="default-btn float-right ml-auto"><i
-                        class="icofont-rounded-double-right" style="font-size: larger;"></i>&nbsp;&nbsp;View More</a>
+                        class="icofont-rounded-double-right" style="font-size: larger;"></i>&nbsp;&nbsp;Read More</a>
             </div>
         </div>
     </div>
@@ -583,12 +638,12 @@
 <div class="appointment-area">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12 col-lg-5 p-0">
+            <div class="col-12 col-md-12 col-lg-5 p-0">
                 <div class="contant-number" style="background-image: url(assets/img/appointment-left-bg.png);">
-                    <h3><i class="icofont-phone"></i> +254 726 256700</h3>
+                    <h3 class="d-none d-xl-block font-medium"><i class="icofont-envelope-open"></i> support@afyarekod.com</h3>
                 </div>
             </div>
-            <div class="col-md-12 col-lg-7 p-0">
+            <div class="col-12 col-md-12 col-lg-7 p-xl-0 pr-4">
                 <div class="appointment-form">
                     <h2 class="title">Leave us a Message</h2>
                     <form [formGroup]="homeContactForm" (ngSubmit)="onContactUs()">
@@ -625,6 +680,7 @@
                         </div>
 
                         <div class="form-group my-2">
+                            <!-- <input type="text" name="subject" formControlName="subject" id="subject" hidden> -->
                             <textarea class="form-control" id="message" rows="6" placeholder="Message"
                                 formControlName="message"></textarea>
 
@@ -638,7 +694,8 @@
                                 [ngClass]="{'text-danger mt-2': !isSent, 'text-info' : isSent}"
                                 [innerHTML]="successMessage">
                             </div>
-                            <div  style="font-size: small; font-weight: bold;" class="help-block text-info" *ngIf="formIsLoading">
+                            <div style="font-size: small; font-weight: bold;" class="help-block text-info"
+                                *ngIf="formIsLoading">
                                 Sending message please wait ...
                             </div>
                         </div>
@@ -717,7 +774,16 @@
                 </div>
             </div>
         </div>
-        <div *ngIf="!isLoading">
+        <div>
+            <div class="loading" *ngIf="!isLoading && !posts">
+                <div class="row justify-content-center" *ngIf="isLoading">
+                    <div class="col-lg-4">
+                        <p class="pl-5">No news at the moment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="!isLoading && posts">
             <div class="latest-news-carousel">
                 <div class="row">
                     <div class="col-12 col-lg-4">
@@ -737,7 +803,7 @@
                                         <a href="javascript:void">{{posts[0].author_fname}}</a>
                                     </li>
                                     <li>{{posts[0].createdAt}}</li>
-                                    <li><i class="icofont-speech-comments"></i> 30</li>
+                                    <!-- <li><i class="icofont-speech-comments"></i> 30</li> -->
                                 </ul>
 
                                 <div [innerHTML]="posts[0].post_title"></div>
@@ -764,7 +830,7 @@
                                         <a href="javascript:void">{{posts[1].author_fname}}</a>
                                     </li>
                                     <li>{{posts[1].createdAt}}</li>
-                                    <li><i class="icofont-speech-comments"></i> 30</li>
+                                    <!-- <li><i class="icofont-speech-comments"></i> 30</li> -->
                                 </ul>
 
                                 <div [innerHTML]="posts[1].post_title"></div>
@@ -791,7 +857,7 @@
                                         <a href="javascript:void">{{posts[2].author_fname}}</a>
                                     </li>
                                     <li>{{posts[2].createdAt}}</li>
-                                    <li><i class="icofont-speech-comments"></i> 30</li>
+                                    <!-- <li><i class="icofont-speech-comments"></i> 30</li> -->
                                 </ul>
 
                                 <div [innerHTML]="posts[2].post_title"></div>

@@ -43,23 +43,24 @@
         </div>
     </div>
 
-    <div class="navbar-container header-sticky">
+    <div class="navbar-container header-sticky is is-sticky">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
-                <a class="navbar-brand" [routerLink]="'/home'">
+                <a class="navbar-brand" [routerLink]="'/'">
                     <img src="assets/img/mainlogo.png" alt="Logo" height="50">
                 </a>
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                <button class="navbar-toggler not-showing" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span id="humburger" class="navbar-toggler-icon"></span>
+                    <span id="closebtn" class="close-iconn py-1 px-1 hide">✖</span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto">
                         <li class="nav-item">
-                            <a class="nav-link" [routerLink]="'/home'">Home</a>
+                            <a class="nav-link" [routerLink]="'/'">Home</a>
                         </li>
 
                         <li class="nav-item">
@@ -84,7 +85,7 @@
                             <div class="dropdown-menu" id="dropdown">
                                 <a class="dropdown-item" [routerLink]="'/demo'">App Demo</a>
                                 <a class="dropdown-item" [routerLink]="'/contact'">Free Trial</a>
-                                <a class="dropdown-item" [routerLink]="'/documents'">Documents</a>
+                                <a class="dropdown-item" [routerLink]="'/documents'">Our Policies</a>
                             </div>
                         </li>
                         <li class="nav-item">

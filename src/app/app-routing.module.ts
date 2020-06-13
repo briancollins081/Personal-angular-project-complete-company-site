@@ -6,11 +6,6 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
-  {
-    path: 'home',
     component: HomeComponent
   },
   {
@@ -48,6 +43,11 @@ const routes: Routes = [
   {
     path: 'privacy',
     loadChildren: () => import('./privacy/privacy.module').then(m => m.PrivacyModule)
+  },
+
+  {
+    path: '**',
+    component: HomeComponent
   }
 ];
 

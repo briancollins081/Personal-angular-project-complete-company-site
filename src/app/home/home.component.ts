@@ -47,6 +47,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       .subscribe(res => {
         this.posts = res.data.posts;
         this.posts = this.posts.sort(compareFromOldest).slice(0,3);
+        this.posts.map(p => p.createdAt = new Date(p.createdAt).toDateString())
         this.isLoading = false;
         // console.log('posts', this.posts);
       }, error => {
@@ -57,12 +58,15 @@ export class HomeComponent implements OnInit, AfterViewInit {
   initContactForm(){
     this.homeContactForm = new FormGroup({
       name: new FormControl("", Validators.required),
+      // subject: new FormControl("Home Page Message", Validators.required),
       email: new FormControl("", [Validators.required, Validators.email]),
-      number: new FormControl("", Validators.required),
+      number: new FormControl("", [Validators.required]),
       message: new FormControl("", Validators.required),
     });
-  }
+  } 
   onContactUs(){
+    this.homeContactForm.value.subject = " "
+    // console.log(this.homeContactForm.value);
     this.formIsLoading = true;
     console.log(this.homeContactForm.value);
     this.homeService.sendMail(this.homeContactForm.value)
