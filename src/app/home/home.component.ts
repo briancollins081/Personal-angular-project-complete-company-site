@@ -39,6 +39,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
         } else {
           this.successMessage = "Message not sent at this time, please try again later or email us using <b>info@afyarekod.com<b>"
         }
+      this.homeContactForm.reset();
       })
   }
 
@@ -68,7 +69,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.homeContactForm.value.subject = " "
     // console.log(this.homeContactForm.value);
     this.formIsLoading = true;
-    console.log(this.homeContactForm.value);
+    // console.log(this.homeContactForm.value);
     this.homeService.sendMail(this.homeContactForm.value)
   }
 
