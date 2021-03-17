@@ -1,4 +1,8 @@
-# PR-1
+# Angular Website + Blog
+
+Uses Node.js REST APIs and Angular for the client
+
+# Development
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
 
