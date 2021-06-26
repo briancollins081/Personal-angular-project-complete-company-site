@@ -2,6 +2,12 @@
 
 Uses Node.js REST APIs and Angular for the client
 
+# Preview the project
+
+The following is the live preview of the application - without the blog api(to be added later)
+
+[App Preview](https://sample-company-site-angular.netlify.app/)
+
 # Development
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
